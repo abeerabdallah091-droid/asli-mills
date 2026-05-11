@@ -1,0 +1,1673 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asli Mills — 100% Natural & Organic</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Asli Mills — 100% natural and organic skincare. Shop Qasil, Henna, Eucalyptus Oil, Neem Oil, Face Mask, and more. Order via WhatsApp.">
+
+  <!-- Open Graph — controls how the link looks when shared on Instagram, WhatsApp, Facebook, TikTok bio, etc. -->
+  <!-- UPDATE the two URLs below after you deploy (replace YOUR-SITE-URL with your real link) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://abeerabdallah091-droid.github.io/asli-mills">
+  <meta property="og:title"       content="Asli Mills — 100% Natural & Organic">
+  <meta property="og:description" content="Shop our handcrafted skincare: Qasil, Henna, Eucalyptus Oil, Neem Oil, Face Mask & more. Order directly via WhatsApp.">
+  <meta property="og:image"       content="https://abeerabdallah091-droid.github.io/asli-mills/products/product%201.jpg">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Asli Mills — 100% Natural & Organic">
+  <meta name="twitter:description" content="Shop our handcrafted skincare: Qasil, Henna, Eucalyptus Oil, Neem Oil, Face Mask & more. Order directly via WhatsApp.">
+  <meta name="twitter:image"       content="https://abeerabdallah091-droid.github.io/asli-mills/products/product%201.jpg">
+
+  <!-- Android Chrome tab colour -->
+  <meta name="theme-color" content="#1B4332">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    :root {
+      --green-900: #0D2B1A;
+      --green-800: #1B4332;
+      --green-700: #2D6A4F;
+      --green-400: #52B788;
+      --green-100: #D8F3DC;
+      --green-50:  #F0FAF3;
+      --gold:      #C9963A;
+      --gold-light:#FDF3E3;
+      --white:     #FFFFFF;
+      --off-white: #FAFAF8;
+      --gray-50:   #F6F5F3;
+      --gray-100:  #EBEBEA;
+      --gray-400:  #9C9C9A;
+      --gray-600:  #5C5C5A;
+      --gray-900:  #1A1A18;
+      --wa:        #25D366;
+      --wa-dark:   #128C7E;
+      --ease-out:  cubic-bezier(0.23, 1, 0.32, 1);
+      --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px; --r-full: 9999px;
+      --sh-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --sh-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+      --sh-lg: 0 12px 40px rgba(0,0,0,.12), 0 4px 10px rgba(0,0,0,.06);
+      --sh-xl: 0 24px 64px rgba(0,0,0,.14), 0 8px 20px rgba(0,0,0,.07);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--white); color: var(--gray-900);
+      line-height: 1.5; -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 68px;
+      background: rgba(232, 229, 216, 0.98);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border-bottom: 1px solid rgba(180,170,145,0.25);
+      transition: box-shadow 200ms var(--ease-out);
+    }
+    .nav.scrolled { box-shadow: var(--sh-sm); }
+    .nav-logo-img-wrap { display: flex; align-items: center; flex-shrink: 0; }
+    .nav-logo-img { height: 52px; width: auto; object-fit: contain; display: block; mix-blend-mode: multiply; }
+    /* text logo shown when logo.png is missing */
+    .nav-logo-text {
+      display: flex; flex-direction: column; line-height: 1; gap: 1px;
+    }
+    .nav-logo-text-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px; font-weight: 900; letter-spacing: -0.3px;
+      color: var(--green-800);
+    }
+    .nav-logo-text-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--gray-600);
+      position: relative; transition: color 200ms var(--ease-out);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; border-radius: 2px;
+      background: var(--green-700);
+      transform: scaleX(0); transform-origin: center;
+      transition: transform 220ms var(--ease-out);
+    }
+    .nav-links a:hover { color: var(--green-800); }
+    .nav-links a.nav-active { color: var(--green-800); font-weight: 700; }
+    .nav-links a.nav-active::after { transform: scaleX(1); }
+    .btn-wa-nav {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--wa); color: #fff;
+      font-size: 13px; font-weight: 700;
+      padding: 10px 20px; border-radius: var(--r-full);
+      box-shadow: 0 2px 8px rgba(37,211,102,.25);
+      transition: transform 160ms var(--ease-out), background 160ms, box-shadow 160ms;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-wa-nav:hover { background: var(--wa-dark); box-shadow: 0 4px 16px rgba(37,211,102,.4); transform: translateY(-1px); }
+    }
+    .btn-wa-nav:active { transform: scale(0.97); }
+
+    /* ── MOBILE NAV BURGER ───────────────────── */
+    .nav-burger {
+      display: none;
+      flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px; width: 36px; height: 36px;
+      border-radius: var(--r-sm);
+      transition: background 160ms var(--ease-out);
+    }
+    .nav-burger span {
+      display: block; width: 20px; height: 2px;
+      background: var(--gray-900); border-radius: 2px;
+      transition: transform 260ms var(--ease-out), opacity 180ms var(--ease-out), transform 260ms var(--ease-out);
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (hover: hover) and (pointer: fine) {
+      .nav-burger:hover { background: var(--gray-50); }
+    }
+
+    /* ── HERO ────────────────────────────────── */
+    .hero {
+      min-height: 100svh; padding-top: 68px;
+      position: relative;
+      display: flex; align-items: center;
+      overflow: hidden;
+      background: #08110a;
+    }
+    /* full-bleed background photo */
+    .hero-bg-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 62% center;
+      z-index: 0;
+    }
+    /* dark gradient overlay — dense left, fades to transparent right */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background: linear-gradient(
+        to right,
+        rgba(5,14,7,.97) 0%,
+        rgba(5,14,7,.90) 30%,
+        rgba(5,14,7,.55) 58%,
+        rgba(5,14,7,.12) 78%,
+        transparent 100%
+      );
+    }
+    /* bottom vignette */
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background: linear-gradient(to top, rgba(5,14,7,.65) 0%, transparent 38%);
+    }
+    /* blobs — GPU only, purely decorative */
+    .hero-bg {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;
+    }
+    .hero-blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(110px); will-change: transform;
+    }
+    .hero-blob-1 {
+      width: 620px; height: 620px;
+      background: radial-gradient(circle, rgba(45,106,79,.65), transparent 65%);
+      top: -180px; left: -100px;
+      animation: hblob1 18s ease-in-out infinite alternate;
+    }
+    .hero-blob-2 {
+      width: 460px; height: 460px;
+      background: radial-gradient(circle, rgba(201,150,58,.22), transparent 65%);
+      bottom: -100px; right: 8%;
+      animation: hblob2 22s ease-in-out infinite alternate;
+      animation-delay: -9s;
+    }
+    .hero-blob-3 {
+      width: 340px; height: 340px;
+      background: radial-gradient(circle, rgba(82,183,136,.3), transparent 65%);
+      top: 30%; left: 35%;
+      animation: hblob3 27s ease-in-out infinite alternate;
+      animation-delay: -16s;
+    }
+    .hero-blob-4 {
+      width: 260px; height: 260px;
+      background: radial-gradient(circle, rgba(201,150,58,.18), transparent 65%);
+      top: -60px; right: 20%;
+      animation: hblob4 20s ease-in-out infinite alternate;
+      animation-delay: -5s;
+    }
+    @keyframes hblob1 { to { translate: 55px 45px; } }
+    @keyframes hblob2 { to { translate: -45px -35px; } }
+    @keyframes hblob3 { to { translate: 35px 55px; } }
+    @keyframes hblob4 { to { translate: -30px 40px; } }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-blob { animation: none !important; }
+    }
+    .hero-copy {
+      position: relative; z-index: 3;
+      max-width: 640px;
+      padding: 80px 64px;
+      animation: fadeUp 650ms var(--ease-out) both;
+    }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+    }
+    .badge-pill::before { content: ''; display: block; width: 18px; height: 2px; background: var(--gold); border-radius: 2px; }
+    .hero-h1 {
+      font-size: clamp(38px, 4.8vw, 66px); font-weight: 900;
+      line-height: 1.07; letter-spacing: -1.5px; color: #fff; margin-bottom: 22px;
+    }
+    .hero-h1 em { font-style: normal; color: var(--gold); }
+    .hero-sub { font-size: 17px; color: rgba(255,255,255,.72); line-height: 1.75; max-width: 480px; margin-bottom: 20px; }
+    .hero-bullets {
+      list-style: none; margin: 0 0 36px; padding: 0;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .hero-bullets li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 14px; font-weight: 500; color: rgba(255,255,255,.72); line-height: 1.5;
+    }
+    .hero-bullets li::before {
+      content: ''; flex-shrink: 0;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold);
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-800); color: #fff;
+      font-size: 15px; font-weight: 700; padding: 16px 32px; border-radius: var(--r-full);
+      box-shadow: 0 4px 20px rgba(27,67,50,.3);
+      transition: transform 160ms var(--ease-out), background 160ms, box-shadow 160ms;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-primary:hover { background: var(--green-700); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(27,67,50,.4); }
+    }
+    .btn-primary:active { transform: scale(0.97); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #fff;
+      font-size: 15px; font-weight: 600; padding: 16px 24px; border-radius: var(--r-full);
+      border: 1.5px solid rgba(255,255,255,.32);
+      transition: transform 160ms var(--ease-out), background 160ms, border-color 160ms;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-outline:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.55); }
+    }
+    .btn-outline:active { transform: scale(0.97); }
+    .hero-stats {
+      display: flex; gap: 28px; margin-top: 44px;
+      padding-top: 36px; border-top: 1px solid rgba(255,255,255,.14);
+      animation: fadeUp 650ms 180ms var(--ease-out) both;
+    }
+    .stat-num { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: -0.5px; }
+    .stat-label { font-size: 12px; font-weight: 500; color: rgba(255,255,255,.5); margin-top: 2px; }
+    .hero-visual {
+      position: relative; height: 100%; min-height: 600px;
+      display: flex; align-items: center; justify-content: center;
+      animation: fadeUp 650ms 80ms var(--ease-out) both;
+    }
+    .hero-img {
+      width: 88%; max-width: 500px; border-radius: var(--r-xl);
+      aspect-ratio: 4/5; object-fit: cover; box-shadow: var(--sh-xl);
+    }
+    .hero-float {
+      position: absolute; bottom: 60px; right: 80px; z-index: 3;
+      background: #fff; color: var(--green-900);
+      border-radius: var(--r-md);
+      padding: 14px 18px; box-shadow: 0 8px 28px rgba(0,0,0,.28);
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; font-weight: 600;
+      animation: float 3.2s ease-in-out infinite;
+    }
+    .hero-float-icon { font-size: 22px; }
+    .hero-float small { font-size: 11px; font-weight: 400; color: var(--gray-400); display: block; margin-top: 1px; }
+
+    .hero-actions-glass {
+      background: rgba(255,255,255,.08);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      backdrop-filter: blur(12px) saturate(160%);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 24px;
+      padding: 34px 40px 38px;
+      margin-top: 24px;
+    }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+    .hero-glass {
+      background: rgba(255,255,255,.08);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      backdrop-filter: blur(12px) saturate(160%);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 24px;
+      padding: 42px 48px 40px;
+      margin-bottom: 28px;
+    }
+    .hero-glass .badge-pill { margin-bottom: 14px; }
+
+    /* ── TRUST BAR ───────────────────────────── */
+    .trust-bar {
+      background: var(--green-800);
+      padding: 16px 0; overflow: hidden; position: relative;
+    }
+    /* edge fade */
+    .trust-bar::before,
+    .trust-bar::after {
+      content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none;
+    }
+    .trust-bar::before { left:  0; background: linear-gradient(to right, var(--green-800), transparent); }
+    .trust-bar::after  { right: 0; background: linear-gradient(to left,  var(--green-800), transparent); }
+
+    .trust-track {
+      display: inline-flex; align-items: center; gap: 0; white-space: nowrap; width: max-content;
+      animation: trustScroll 28s linear infinite;
+    }
+    @keyframes trustScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .trust-item {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 0 32px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+      color: rgba(255,255,255,.55);
+      transition: color 200ms;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .trust-item:hover { color: rgba(255,255,255,.9); }
+    }
+    .trust-dot { color: rgba(255,255,255,.2); font-size: 12px; padding: 0 4px; letter-spacing: 0; }
+
+    /* ── PLAYFAIR DISPLAY — main headings ───── */
+    h1, h2, h3, h4,
+    .hero-h1, .sh2, .about-chip-n {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* ── MONTSERRAT — subheadings & labels ─── */
+    .nav-logo, .footer-logo,
+    .stag, .badge-pill,
+    .hiw-title, .pcard-name,
+    .review-name, .stat-num, .hero-stat-num,
+    .trust-item, .btn-primary, .btn-outline,
+    .btn-wa-nav, .btn-wa-card, .btn-wa-big,
+    .section-tag, .pcard-badge, .hiw-n,
+    .about-chip-l, .stat-label {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ── SHARED SECTION ──────────────────────── */
+    section { padding: 100px 64px; }
+    .stag { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .stag::before { content:''; display:block; width:18px; height:2px; background:var(--gold); border-radius:2px; }
+    .stag.center { justify-content: center; }
+    .stag.center::before, .stag.center::after { content:''; display:block; width:18px; height:2px; background:var(--gold); border-radius:2px; }
+    .sh2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 900; line-height: 1.1; letter-spacing: -0.6px; margin-bottom: 14px; }
+    .ssub { font-size: 16px; color: var(--gray-600); line-height: 1.7; max-width: 500px; }
+
+    /* ── ABOUT ───────────────────────────────── */
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; background: var(--off-white); }
+    .about-visual { position: relative; }
+    .about-img { width: 100%; border-radius: var(--r-xl); aspect-ratio: 4/3; object-fit: cover; object-position: center; box-shadow: var(--sh-lg); }
+    .about-chip {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--green-800); color: #fff;
+      border-radius: var(--r-md); padding: 18px 22px; text-align: center; box-shadow: var(--sh-md);
+    }
+    .about-chip-n { font-size: 34px; font-weight: 900; letter-spacing: -1px; line-height: 1; }
+    .about-chip-l { font-size: 10px; font-weight: 500; opacity:.65; margin-top: 3px; letter-spacing: 0.04em; }
+    .about-body { font-size: 16px; color: var(--gray-600); line-height: 1.8; margin: 22px 0 32px; }
+    .pills { display: flex; gap: 9px; flex-wrap: wrap; }
+    .pill { background: var(--green-100); color: var(--green-800); font-size: 13px; font-weight: 600; padding: 7px 15px; border-radius: var(--r-full); }
+
+    /* ── HOW IT WORKS ────────────────────────── */
+    .hiw { background: var(--white); overflow: hidden; }
+    .hiw-head { text-align: center; margin-bottom: 72px; }
+    .hiw-head .stag { justify-content: center; }
+    .hiw-head .stag::before { display: none; }
+    .hiw-head .ssub { margin: 0 auto; }
+
+    /* connecting line behind the cards */
+    .hiw-grid-wrap { position: relative; }
+    .hiw-grid-wrap::before {
+      content: '';
+      position: absolute; top: 52px; left: calc(12.5% + 10px); right: calc(12.5% + 10px);
+      height: 2px; background: var(--green-100); z-index: 0;
+      transform-origin: left center;
+      transform: scaleX(0);
+      transition: transform 900ms 200ms var(--ease-out);
+    }
+    .hiw-grid-wrap.line-visible::before { transform: scaleX(1); }
+
+    .hiw-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+      position: relative; z-index: 1;
+    }
+
+    /* card entrance: each card fades + rises; JS adds .hiw-in with stagger */
+    .hiw-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-100);
+      border-radius: var(--r-xl);
+      padding: 36px 24px 28px;
+      text-align: center; position: relative;
+      box-shadow: var(--sh-sm);
+      opacity: 0; transform: translateY(24px);
+      transition:
+        opacity      300ms var(--ease-out),
+        transform    300ms var(--ease-out),
+        box-shadow   220ms var(--ease-out),
+        border-color 220ms var(--ease-out),
+        background   260ms var(--ease-out);
+    }
+    .hiw-card.hiw-in { opacity: 1; transform: translateY(0); }
+    .hiw-title { transition: color 260ms var(--ease-out); }
+    .hiw-desc  { transition: color 260ms var(--ease-out); }
+    @media (hover: hover) and (pointer: fine) {
+      .hiw-card:hover {
+        background: var(--green-800);
+        transform: translateY(-10px);
+        box-shadow: 0 16px 48px rgba(27,67,50,.35);
+        border-color: var(--green-700);
+      }
+      .hiw-card:hover .hiw-title { color: #fff; }
+      .hiw-card:hover .hiw-desc  { color: rgba(255,255,255,.75); }
+      .hiw-card:hover::before     { color: rgba(255,255,255,.1); }
+      /* icon ring expands on hover */
+      .hiw-card:hover .hiw-icon {
+        box-shadow: 0 0 0 8px rgba(255,255,255,.15), 0 0 0 14px rgba(255,255,255,.06);
+        transform: scale(1.06);
+      }
+      .hiw-card:hover .hiw-n {
+        background: var(--gold);
+        transform: translateX(-50%) scale(1.15);
+      }
+    }
+
+    /* step number badge */
+    .hiw-n {
+      position: absolute; top: -14px; left: 50%;
+      transform: translateX(-50%);
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--green-800); color: #fff;
+      font-size: 11px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(27,67,50,.3);
+      transition: background 220ms var(--ease-out), transform 220ms var(--ease-out);
+      transform-origin: 50% 50%;
+    }
+    /* badge pops in after card */
+    .hiw-card.hiw-in .hiw-n {
+      animation: badgePop 350ms var(--ease-out) both;
+    }
+    @keyframes badgePop {
+      0%   { transform: translateX(-50%) scale(0.4); opacity: 0; }
+      70%  { transform: translateX(-50%) scale(1.18); }
+      100% { transform: translateX(-50%) scale(1);   opacity: 1; }
+    }
+
+    /* ghost big number in background */
+    .hiw-card::before {
+      content: attr(data-n);
+      position: absolute; bottom: 12px; right: 16px;
+      font-size: 64px; font-weight: 900; line-height: 1;
+      color: var(--green-100); pointer-events: none;
+      transition: color 220ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .hiw-card:hover::before { color: var(--green-100); }
+    }
+
+    .hiw-icon {
+      width: 88px; height: 88px; border-radius: 50%; object-fit: cover;
+      margin: 8px auto 20px;
+      box-shadow: 0 0 0 5px var(--green-100);
+      transition: box-shadow 260ms var(--ease-out), transform 260ms var(--ease-out);
+    }
+    .hiw-title {
+      font-size: 13px; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-800); margin-bottom: 10px;
+    }
+    .hiw-desc { font-size: 13px; color: var(--gray-600); line-height: 1.7; position: relative; z-index: 1; }
+
+    /* ── PRODUCTS ────────────────────────────── */
+    .products { background: var(--white); }
+    .products-head { text-align: center; margin-bottom: 56px; }
+    .products-head .stag { justify-content: center; }
+    .products-head .stag::before { display: none; }
+    .products-head .ssub { margin: 0 auto; }
+
+    .pgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+    .pcard {
+      background: #F8F4EE;
+      border-radius: 12px; overflow: hidden;
+      display: flex; flex-direction: column;
+      opacity: 0; transform: translateY(20px);
+      transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
+    }
+    .pcard.vis { animation: cardIn 380ms var(--ease-out) forwards; }
+    @keyframes cardIn { to { opacity:1; transform:translateY(0); } }
+    @media (hover: hover) and (pointer: fine) {
+      .pcard:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.10); }
+    }
+
+    .pcard-img-wrap {
+      position: relative; aspect-ratio: 1;
+      background: #EDE8DF; overflow: hidden;
+    }
+    .pcard-img { width: 100%; height: 100%; object-fit: cover; transition: transform 420ms var(--ease-out); }
+    @media (hover: hover) and (pointer: fine) { .pcard:hover .pcard-img { transform: scale(1.05); } }
+
+    .pcard-heart {
+      position: absolute; top: 7px; right: 7px;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 1px 4px rgba(0,0,0,.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--gray-400);
+      transition: color 160ms var(--ease-out), transform 160ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .pcard-heart:hover { color: #e05a5a; transform: scale(1.12); }
+    }
+    .pcard-heart:active { transform: scale(0.92); }
+    .pcard-heart.saved { color: #e05a5a; }
+
+    .pcard-quickview {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 6px 10px;
+      background: rgba(255,255,255,.82);
+      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--gray-600); text-align: center;
+      opacity: 0; transform: translateY(4px);
+      transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .pcard:hover .pcard-quickview { opacity: 1; transform: translateY(0); }
+    }
+
+    .pcard-body { display: flex; flex-direction: column; flex: 1; padding: 9px 9px 10px; }
+    .pcard-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 11px; font-weight: 700; color: var(--gray-900);
+      line-height: 1.3; margin-bottom: 2px;
+    }
+    .pcard-vol {
+      font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 400;
+      color: var(--gray-400); display: block; margin-bottom: 6px;
+    }
+    .pcard-stars { display: flex; gap: 1px; color: var(--gold); font-size: 9px; margin-bottom: 9px; }
+
+    .btn-wa-card {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--green-800); color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 9px 10px; border-radius: 7px; margin-top: auto;
+      transition: transform 160ms var(--ease-out), background 160ms;
+    }
+    .btn-wa-card-arrow { font-size: 11px; transition: transform 200ms var(--ease-out); }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-wa-card:hover { background: var(--green-700); }
+      .btn-wa-card:hover .btn-wa-card-arrow { transform: translate(2px, -2px); }
+    }
+    .btn-wa-card:active { transform: scale(0.97); }
+
+    /* ── TESTIMONIALS — infinite marquee ────── */
+    .testimonials {
+      background: var(--green-900); color: #fff;
+      padding: 100px 0; overflow: hidden;
+    }
+    .testimonials-head { text-align: center; padding: 0 64px; margin-bottom: 60px; }
+    .testimonials-head .stag {
+      justify-content: center;
+      font-size: 13px; font-weight: 800; letter-spacing: 0.18em;
+      color: #fff; gap: 14px; margin-bottom: 18px;
+    }
+    .testimonials-head .stag::before, .testimonials-head .stag::after {
+      width: 28px; height: 2px; background: rgba(255,255,255,.4);
+    }
+    .testimonials-head .sh2 { color: #fff; }
+    .testimonials-head .ssub { color: rgba(255,255,255,.6); margin: 0 auto; }
+
+    /* track wrapper: mask edges with gradient */
+    .marquee-outer {
+      position: relative;
+    }
+    .marquee-outer::before,
+    .marquee-outer::after {
+      content: '';
+      position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+    }
+    .marquee-outer::before { left: 0;  background: linear-gradient(to right,  var(--green-900), transparent); }
+    .marquee-outer::after  { right: 0; background: linear-gradient(to left,   var(--green-900), transparent); }
+
+    .marquee-track {
+      display: flex; gap: 20px; width: max-content;
+      padding: 10px 0;
+    }
+    .marquee-track--forward  { animation: scrollFwd  38s linear infinite; }
+    .marquee-track--backward { animation: scrollBack 44s linear infinite; margin-top: 16px; }
+
+    /* pause on hover (Emil: constant motion is ok to pause interactively) */
+    .marquee-outer:hover .marquee-track { animation-play-state: paused; }
+
+    @keyframes scrollFwd  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+    @keyframes scrollBack { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+    .review-card {
+      flex-shrink: 0; width: 300px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--r-lg);
+      padding: 26px 24px;
+      transition: background 200ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .review-card:hover { background: rgba(255,255,255,.13); }
+    }
+    .review-stars { display: flex; gap: 3px; font-size: 13px; color: var(--gold); margin-bottom: 14px; }
+    .review-text { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.82); margin-bottom: 20px; }
+    .review-author { display: flex; flex-direction: column; gap: 2px; }
+    .review-name { font-size: 13px; font-weight: 700; color: #fff; }
+    .review-meta { font-size: 11px; color: rgba(255,255,255,.4); }
+
+    /* ── CTA BANNER ──────────────────────────── */
+    .cta {
+      background: linear-gradient(135deg, var(--green-700), var(--green-800) 50%, var(--green-900));
+      padding: 80px 64px; display: flex;
+      align-items: center; justify-content: space-between; gap: 40px; color: #fff;
+    }
+    .cta h2 { font-size: clamp(22px, 2.8vw, 38px); font-weight: 900; letter-spacing: -0.4px; margin-bottom: 10px; }
+    .cta p { font-size: 16px; opacity:.72; max-width: 400px; line-height: 1.65; }
+    .btn-wa-big {
+      flex-shrink: 0; display: inline-flex; align-items: center; gap: 12px;
+      background: var(--wa); color: #fff; font-size: 16px; font-weight: 800;
+      padding: 18px 36px; border-radius: var(--r-full);
+      box-shadow: 0 4px 24px rgba(37,211,102,.35);
+      transition: transform 160ms var(--ease-out), background 160ms, box-shadow 160ms;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-wa-big:hover { background: var(--wa-dark); box-shadow: 0 6px 32px rgba(37,211,102,.55); transform: translateY(-2px); }
+    }
+    .btn-wa-big:active { transform: scale(0.97); }
+
+    /* ── GALLERY (product spotlight) ────────── */
+    .gallery { background: var(--off-white); }
+    .gallery-head { text-align: center; margin-bottom: 64px; }
+    .gallery-head .stag { justify-content: center; }
+    .gallery-head .stag::before { display: none; }
+    .gallery-head .ssub { margin: 0 auto; }
+
+    .spotlight {
+      display: grid; grid-template-columns: 1fr 1fr;
+      max-width: 960px; margin: 0 auto;
+      border-radius: var(--r-xl); overflow: hidden;
+      box-shadow: var(--sh-xl);
+    }
+    .spotlight-img {
+      background: #e8e2d9;
+      min-height: 480px; position: relative; overflow: hidden;
+    }
+    .spotlight-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      transition: transform 500ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .spotlight:hover .spotlight-img img { transform: scale(1.04); }
+    }
+    .spotlight-info {
+      background: #fff;
+      padding: 52px 48px;
+      display: flex; flex-direction: column;
+    }
+    .spotlight-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .spotlight-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(28px, 3vw, 40px); font-weight: 900;
+      line-height: 1.1; letter-spacing: -0.5px;
+      color: var(--gray-900); margin-bottom: 6px;
+    }
+    .spotlight-sub {
+      font-size: 14px; color: var(--gray-400); margin-bottom: 14px;
+    }
+    .spotlight-stars {
+      color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 22px;
+    }
+    .spotlight-tabs {
+      display: flex; gap: 0;
+      border-bottom: 2px solid var(--gray-100); margin-bottom: 20px;
+    }
+    .spotlight-tab {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--gray-400);
+      padding: 0 20px 12px 0;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      cursor: pointer;
+      transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+    }
+    .spotlight-tab.active { color: var(--green-800); border-color: var(--green-800); }
+    .spotlight-tab-panel { display: none; }
+    .spotlight-tab-panel.active {
+      display: block;
+      font-size: 14px; color: var(--gray-600); line-height: 1.8;
+      margin-bottom: 32px; flex: 1;
+    }
+    .btn-wa-big {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--wa); color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px; font-weight: 700; padding: 18px 36px;
+      border-radius: var(--r-full);
+      box-shadow: 0 4px 20px rgba(37,211,102,.28);
+      transition: transform 160ms var(--ease-out), background 160ms, box-shadow 160ms;
+      margin-top: auto;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-wa-big:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,.4); }
+    }
+    .btn-wa-big:active { transform: scale(0.97); }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer { background: var(--gray-900); color: rgba(255,255,255,.8); padding: 72px 64px 40px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 52px; margin-bottom: 52px; }
+    .footer-logo-img {
+      height: 90px; width: auto; object-fit: contain; display: block;
+      margin-bottom: 16px;
+    }
+    .footer-desc { font-size: 14px; line-height: 1.75; color: rgba(255,255,255,.48); margin-bottom: 22px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .fsoc {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(255,255,255,.08); color: rgba(255,255,255,.65);
+      display: flex; align-items: center; justify-content: center; font-size: 13px;
+      transition: background 150ms, transform 160ms var(--ease-out);
+    }
+    .fsoc svg { width: 16px; height: 16px; display: block; flex-shrink: 0; }
+    @media (hover: hover) and (pointer: fine) {
+      .fsoc:hover { color: #fff; transform: translateY(-2px); }
+      .fsoc[data-brand="facebook"]:hover  { background: #1877F2; }
+      .fsoc[data-brand="instagram"]:hover { background: #E1306C; }
+      .fsoc[data-brand="tiktok"]:hover     { background: #000; }
+      .fsoc[data-brand="pinterest"]:hover { background: #E60023; }
+      .fsoc[data-brand="whatsapp"]:hover  { background: var(--wa); }
+    }
+    .fcol-title { font-size: 11px; font-weight: 700; letter-spacing:.1em; text-transform:uppercase; color: rgba(255,255,255,.3); margin-bottom: 18px; }
+    .fcol-list { display: flex; flex-direction: column; gap: 11px; }
+    .fcol-list a, .fcol-list span { font-size: 14px; color: rgba(255,255,255,.58); transition: color 140ms; }
+    @media (hover: hover) and (pointer: fine) { .fcol-list a:hover { color: #fff; } }
+    .fcontact-row { display: flex; gap: 8px; align-items: flex-start; }
+    .fcontact-icon { font-size: 13px; margin-top: 2px; flex-shrink: 0; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08); padding-top: 26px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      font-size: 12px; color: rgba(255,255,255,.28);
+    }
+    .footer-bottom a { color: var(--green-400); }
+
+    /* ── FLOATING WA ─────────────────────────── */
+    .wa-fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 300;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--wa); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 26px;
+      box-shadow: 0 4px 20px rgba(37,211,102,.45);
+      transition: transform 160ms var(--ease-out), box-shadow 160ms;
+      animation: popIn 500ms 1s var(--ease-out) both;
+    }
+    @keyframes popIn { from { opacity:0; transform:scale(0.65); } to { opacity:1; transform:scale(1); } }
+    @media (hover: hover) and (pointer: fine) {
+      .wa-fab:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+    }
+    .wa-fab:active { transform: scale(0.95); }
+    .wa-tip {
+      position: absolute; right: 66px; top: 50%; transform: translateY(-50%) translateX(4px);
+      background: var(--gray-900); color: #fff;
+      font-size: 12px; font-weight: 600; white-space: nowrap;
+      padding: 7px 13px; border-radius: var(--r-sm);
+      pointer-events: none; opacity: 0;
+      transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out);
+    }
+    .wa-tip::after {
+      content: ''; position: absolute; left: 100%; top: 50%; transform: translateY(-50%);
+      border: 5px solid transparent; border-left-color: var(--gray-900);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .wa-fab:hover .wa-tip { opacity: 1; transform: translateY(-50%) translateX(0); }
+    }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 1024px) {
+      .pgrid { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .spotlight { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 72px 24px; }
+
+      /* nav */
+      .nav { padding: 0 20px; }
+      .nav-burger { display: flex; }
+      .btn-wa-nav { display: none; }
+      .nav-links {
+        position: absolute; top: 68px; left: 0; right: 0; z-index: 100;
+        flex-direction: column; gap: 0;
+        background: rgba(232, 229, 216, 0.98);
+        -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(180,170,145,0.3);
+        box-shadow: var(--sh-lg);
+        display: none;
+      }
+      .nav-links.nav-open { display: flex; animation: fadeUp 220ms var(--ease-out) both; }
+      .nav-links a { padding: 16px 24px; font-size: 16px; border-bottom: 1px solid var(--gray-100); }
+      .nav-links a::after { display: none; }
+
+      /* hero */
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-copy { padding: 48px 24px 40px; }
+      .hero-visual { min-height: 280px; padding: 0 24px 48px; }
+      .hero-img { width: 100%; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .hero-float { right: 16px; bottom: 24px; font-size: 12px; padding: 10px 14px; }
+      .hero-float small { display: none; }
+
+      /* marquee */
+      .trust-track { animation-duration: 18s; }
+
+      /* about */
+      .about { grid-template-columns: 1fr; gap: 40px; padding: 72px 24px; }
+      .about-chip { right: 0; bottom: -14px; }
+
+      /* steps */
+      .hiw-grid { grid-template-columns: 1fr 1fr; }
+      .hiw-grid-wrap::before { display: none; }
+
+      /* products */
+      .pgrid { grid-template-columns: repeat(2, 1fr); }
+
+      /* spotlight */
+      .spotlight-info { padding: 32px 28px; }
+
+      /* cta */
+      .cta { flex-direction: column; text-align: center; padding: 60px 24px; }
+      .cta .btn-wa-big { width: 100%; justify-content: center; }
+
+      /* footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      footer { padding: 56px 24px 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+
+      /* testimonials */
+      .testimonials { padding: 72px 0; overflow: hidden; }
+      .testimonials-head { padding: 0 24px; margin-bottom: 36px; }
+      .marquee-outer::before, .marquee-outer::after { width: 48px; }
+      .review-card { width: 260px; padding: 20px 18px; }
+      .review-text { font-size: 13px; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 56px 18px; }
+      .hero-h1 { font-size: 32px; letter-spacing: -0.6px; }
+      .hero-sub { font-size: 15px; }
+      .hero-copy { padding: 36px 18px 32px; }
+      .hero-stats { gap: 14px; padding-top: 20px; margin-top: 28px; }
+      .stat-num { font-size: 22px; }
+      .hero-float { display: none; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn-primary,
+      .hero-actions .btn-outline { width: 100%; justify-content: center; }
+      .pgrid { grid-template-columns: 1fr; }
+      .hiw-grid { grid-template-columns: 1fr; }
+      .spotlight-info { padding: 24px 20px; }
+      .spotlight-name { font-size: 26px; }
+      .cta h2 { font-size: 22px; }
+      .sh2 { font-size: 26px; }
+      .footer-logo-img { height: 70px; }
+      .footer-socials { gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+    }
+
+    /* ── PRODUCT DETAIL OVERLAY ──────────── */
+    .pd-overlay {
+      position: fixed; inset: 0; z-index: 400;
+      background: #fff;
+      display: flex; flex-direction: column;
+      opacity: 0; visibility: hidden;
+      transform: translateY(16px);
+      transition:
+        opacity    300ms var(--ease-out),
+        transform  300ms var(--ease-out),
+        visibility 0ms   300ms;
+      overflow-y: auto;
+    }
+    .pd-overlay.pd-open {
+      opacity: 1; visibility: visible; transform: translateY(0);
+      transition:
+        opacity    300ms var(--ease-out),
+        transform  300ms var(--ease-out),
+        visibility 0ms;
+    }
+    .pd-nav {
+      position: sticky; top: 0; z-index: 10; flex-shrink: 0;
+      height: 60px; padding: 0 40px;
+      display: flex; align-items: center;
+      background: rgba(255,255,255,.96);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .pd-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.02em;
+      color: var(--gray-600);
+      transition: color 160ms var(--ease-out);
+    }
+    .pd-back svg { width: 16px; height: 16px; }
+    @media (hover: hover) and (pointer: fine) {
+      .pd-back:hover { color: var(--green-800); }
+    }
+    .pd-body {
+      flex: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      max-width: 960px; margin: 0 auto;
+      padding: 60px 40px 80px;
+      gap: 64px; align-items: start;
+      width: 100%;
+    }
+    .pd-img-wrap {
+      position: sticky; top: 80px;
+      border-radius: var(--r-xl); overflow: hidden;
+      background: #EDE8DF; aspect-ratio: 1 / 1;
+    }
+    .pd-img { width: 100%; height: 100%; object-fit: cover; }
+    .pd-info { display: flex; flex-direction: column; }
+    .pd-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+    }
+    .pd-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 3vw, 40px); font-weight: 900;
+      line-height: 1.1; letter-spacing: -0.5px;
+      color: var(--gray-900); margin-bottom: 6px;
+    }
+    .pd-vol { font-size: 13px; color: var(--gray-400); margin-bottom: 8px; }
+    .pd-stars { color: var(--gold); font-size: 16px; letter-spacing: 3px; margin-bottom: 24px; }
+    .pd-divider { height: 1px; background: var(--gray-100); margin: 22px 0; }
+    .pd-section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gray-400); margin-bottom: 12px;
+    }
+    .pd-desc { font-size: 15px; color: var(--gray-600); line-height: 1.8; }
+    .pd-benefits { display: flex; flex-direction: column; gap: 10px; }
+    .pd-benefit {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 14px; color: var(--gray-600); line-height: 1.5;
+    }
+    .pd-benefit::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px;
+      border-radius: 50%; background: var(--gold); margin-top: 7px;
+    }
+    .btn-wa-pd {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      background: var(--green-800); color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px; font-weight: 700;
+      padding: 18px 36px; border-radius: var(--r-full);
+      box-shadow: 0 4px 20px rgba(27,67,50,.25);
+      transition: transform 160ms var(--ease-out), background 160ms, box-shadow 160ms;
+      margin-top: 32px;
+    }
+    .btn-wa-pd svg { width: 20px; height: 20px; flex-shrink: 0; }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-wa-pd:hover { background: var(--green-700); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(27,67,50,.4); }
+    }
+    .btn-wa-pd:active { transform: scale(0.97); }
+    .pcard { cursor: pointer; }
+    @media (max-width: 768px) {
+      .pd-body { grid-template-columns: 1fr; gap: 28px; padding: 28px 20px 60px; }
+      .pd-img-wrap { position: static; }
+      .pd-nav { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOATING WA -->
+  <a href="https://wa.me/252634838880?text=Hello%20Asli%20Mills!%20I%27d%20like%20to%20order." target="_blank" rel="noopener" class="wa-fab" aria-label="Order via WhatsApp">
+    💬<span class="wa-tip">Order via WhatsApp</span>
+  </a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo-img-wrap" aria-label="Asli Mills Home">
+      <img src="products/logo.png" alt="Asli Mills" class="nav-logo-img"
+           onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="nav-logo-text" style="display:none;">
+        <span class="nav-logo-text-main">Asli Mills</span>
+        <span class="nav-logo-text-sub">100% Natural</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="https://wa.me/252634838880?text=Hello%20Asli%20Mills!%20I%27d%20like%20to%20order." target="_blank" rel="noopener" class="btn-wa-nav">
+      💬 Order Now
+    </a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <!-- full-bleed background photo -->
+    <img src="products/hero-eucalyptus.jpeg" alt="" class="hero-bg-img" aria-hidden="true" loading="eager"
+         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1601049541278-d5e5e5e66e5b?w=1400&auto=format&fit=crop'">
+    <!-- decorative blobs + grain -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-blob hero-blob-4"></div>
+    </div>
+    <!-- text — sits directly on the dark gradient overlay -->
+    <div class="hero-copy">
+      <div class="badge-pill">100% Natural &amp; Organic</div>
+      <h1 class="hero-h1">Who We<br><em>Are.</em></h1>
+      <p class="hero-sub">Since 1998, Asli Mills has been Hargeisa's most trusted source for pure, natural skincare — from wild-crafted Frankincense to the legendary Qasil leaf.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Shop Products →</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">1998</div><div class="stat-label">Est. Hargeisa</div></div>
+        <div><div class="stat-num">8+</div><div class="stat-label">Natural products</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Organic always</div></div>
+      </div>
+    </div>
+    <!-- floating badge — bottom-right corner -->
+    <div class="hero-float">
+      <span class="hero-float-icon">🌿</span>
+      <div>Handpicked Ingredients<small>Ethically sourced, Somaliland</small></div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-track">
+      <span class="trust-item">100% Natural</span><span class="trust-dot">—</span>
+      <span class="trust-item">Ethically Sourced</span><span class="trust-dot">—</span>
+      <span class="trust-item">Made in Somaliland</span><span class="trust-dot">—</span>
+      <span class="trust-item">Order via WhatsApp</span><span class="trust-dot">—</span>
+      <span class="trust-item">Eco-Friendly</span><span class="trust-dot">—</span>
+      <span class="trust-item">Wild-Crafted Ingredients</span><span class="trust-dot">—</span>
+      <span class="trust-item">Since 1998</span><span class="trust-dot">—</span>
+      <!-- duplicate for seamless loop -->
+      <span class="trust-item">100% Natural</span><span class="trust-dot">—</span>
+      <span class="trust-item">Ethically Sourced</span><span class="trust-dot">—</span>
+      <span class="trust-item">Made in Somaliland</span><span class="trust-dot">—</span>
+      <span class="trust-item">Order via WhatsApp</span><span class="trust-dot">—</span>
+      <span class="trust-item">Eco-Friendly</span><span class="trust-dot">—</span>
+      <span class="trust-item">Wild-Crafted Ingredients</span><span class="trust-dot">—</span>
+      <span class="trust-item">Since 1998</span><span class="trust-dot">—</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-visual reveal">
+      <img src="products/about-hero.jpeg" alt="Asli Mills natural products" class="about-img" loading="lazy">
+      <div class="about-chip">
+        <div class="about-chip-n">25+</div>
+        <div class="about-chip-l">Years Trusted</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="stag">About Us</div>
+      <h2 class="sh2">Who We Are</h2>
+      <p class="about-body">
+        Asli Mills was founded on 5th February 1998. We have become a leading producer for reliable and natural products by producing 100% natural products with quality, reasonably priced, and environmentally friendly.
+      </p>
+      <p class="about-body" style="margin-top:-12px">
+        From the ancient Frankincense forests of the Horn of Africa to the time-honoured Qasil leaf trusted by generations of Somali women — every product we offer carries centuries of natural wisdom.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="hiw" id="how-it-works">
+    <div class="hiw-head">
+      <div class="stag">How It Works</div>
+      <h2 class="sh2">4 Simple Steps to Glowing Skin</h2>
+      <p class="ssub">Gentle, effective, and grounded in tradition — your new routine starts here.</p>
+    </div>
+    <div class="hiw-grid-wrap" id="hiwWrap">
+      <div class="hiw-grid">
+        <div class="hiw-card" data-n="1">
+          <div class="hiw-n">1</div>
+          <img src="products/about-hero.jpeg" alt="Wash" class="hiw-icon" loading="lazy">
+          <div class="hiw-title">Wash</div>
+          <p class="hiw-desc">Start with a gentle cleanse using our natural powders to remove impurities without stripping moisture.</p>
+        </div>
+        <div class="hiw-card" data-n="2">
+          <div class="hiw-n">2</div>
+          <img src="products/product 2.jpg" alt="Qasil" class="hiw-icon" loading="lazy">
+          <div class="hiw-title">Make</div>
+          <p class="hiw-desc">Mix Qasil, Henna, or Face Pack with water to activate a fresh paste tailored to your skin.</p>
+        </div>
+        <div class="hiw-card" data-n="3">
+          <div class="hiw-n">3</div>
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=200&h=200&fit=crop&auto=format" alt="Treat" class="hiw-icon" loading="lazy">
+          <div class="hiw-title">Treat</div>
+          <p class="hiw-desc">Apply and let Frankincense or Myrrh penetrate deep — nourishing, calming, and restoring your skin.</p>
+        </div>
+        <div class="hiw-card" data-n="4">
+          <div class="hiw-n">4</div>
+          <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=200&h=200&fit=crop&auto=format" alt="Natural glow" class="hiw-icon" loading="lazy">
+          <div class="hiw-title">Natural</div>
+          <p class="hiw-desc">Reveal bright, toned, conditioned skin — the way nature intended. No harsh chemicals, ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="products-head">
+      <div class="stag">Our Products</div>
+      <h2 class="sh2">Our Experimented Products</h2>
+      <p class="ssub">100% Organic. Simple, Clean and Highly Effective Skincare.</p>
+    </div>
+    <div class="pgrid" id="pgrid">
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/product 1.jpg" alt="Face Mask" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Asli Mills Face Mask</div>
+          <span class="pcard-vol">rice brightening</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20the%20Face%20Mask." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/product 2.jpg" alt="Qasil" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Qasil</div>
+          <span class="pcard-vol">wt 80g</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Qasil." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/products 3.jpg" alt="Henna" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Henna</div>
+          <span class="pcard-vol">natural product</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Henna." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/product4.jpg" alt="Eucalyptus Oil" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Eucalyptus Oil</div>
+          <span class="pcard-vol">vol 30ml</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Eucalyptus%20Oil." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/product5.jpg" alt="Neem Oil" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Neem Oil</div>
+          <span class="pcard-vol">vol 30ml</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Neem%20Oil." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/product 6.jpg" alt="Face Pack" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Face Pack</div>
+          <span class="pcard-vol">wt 50g</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20the%20Face%20Pack." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pcard-img-wrap">
+          <img src="products/product7.jpg" alt="Frankincense Boswellia" class="pcard-img" loading="lazy">
+          <button type="button" class="pcard-heart" aria-label="Save">♡</button>
+          <div class="pcard-quickview">View Product →</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-name">Frankincense Boswellia-Carterii</div>
+          <span class="pcard-vol">raw resin</span>
+          <div class="pcard-stars">★★★★★</div>
+          <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Frankincense%20Boswellia." target="_blank" rel="noopener" class="btn-wa-card">Order via WhatsApp <span class="btn-wa-card-arrow">↗</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS — infinite auto-scroll marquee, no images -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-head">
+      <div class="stag center">Testimonials</div>
+      <h2 class="sh2">Our Customers Love Us</h2>
+      <p class="ssub">We make sure that we make every customer happy.</p>
+    </div>
+
+    <!-- ROW 1 — scrolls left → -->
+    <div class="marquee-outer">
+      <div class="marquee-track marquee-track--forward" id="row1"></div>
+    </div>
+
+    <!-- ROW 2 — scrolls right ← -->
+    <div class="marquee-outer" style="margin-top:16px">
+      <div class="marquee-track marquee-track--backward" id="row2"></div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta">
+    <div>
+      <h2>Ready to Start Your Natural Skin Journey?</h2>
+      <p>Message us on WhatsApp to place your order, ask questions, or get a personalised product recommendation. We reply fast!</p>
+    </div>
+    <a href="https://wa.me/252634838880?text=Hello%20Asli%20Mills!%20I%27d%20like%20to%20order." target="_blank" rel="noopener" class="btn-wa-big">
+      <span style="font-size:22px">💬</span> Chat &amp; Order Now
+    </a>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-head">
+      <div class="stag center">Featured Product</div>
+      <h2 class="sh2">Most Loved &amp; Most Used</h2>
+      <p class="ssub">Our most-requested natural skincare — loved by families across Somaliland since 1998.</p>
+    </div>
+    <div class="spotlight">
+      <div class="spotlight-img">
+        <img src="products/product5.jpg" alt="Neem Oil" loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=700&auto=format&fit=crop'">
+      </div>
+      <div class="spotlight-info">
+        <div class="spotlight-tag">Pure Cold-Pressed Extract</div>
+        <div class="spotlight-name">Neem Oil</div>
+        <div class="spotlight-sub">Vol 30ml &nbsp;·&nbsp; 100% Organic</div>
+        <div class="spotlight-stars">★★★★★</div>
+        <div class="spotlight-tabs">
+          <div class="spotlight-tab active" data-tab="benefits">Benefits</div>
+          <div class="spotlight-tab" data-tab="howto">How To Use</div>
+        </div>
+        <div class="spotlight-tab-panel active" id="tab-benefits">
+          Neem oil is nature's most powerful skin healer — rich in fatty acids, antioxidants and antibacterial compounds. Deeply nourishes dry skin, clears blemishes, and reduces the appearance of dark spots. Sourced directly from Somaliland's wild neem trees.
+        </div>
+        <div class="spotlight-tab-panel" id="tab-howto">
+          Apply 2–3 drops to clean skin and massage gently in circular motions. Use every morning and evening for best results. Can be mixed with your favourite moisturiser. Patch test recommended for sensitive skin.
+        </div>
+        <a href="https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Neem%20Oil." target="_blank" rel="noopener" class="btn-wa-big">
+          💬 Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <img src="products/logo.png" alt="Asli Mills" class="footer-logo-img">
+        <p class="footer-desc">Your go-to for all your natural and organic choices. Founded in 1998 in Hargeisa, Somaliland — producing 100% natural products with quality, affordability, and the environment in mind.</p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@aslimills" target="_blank" rel="noopener" class="fsoc" data-brand="tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.78a8.25 8.25 0 0 0 4.83 1.55V6.88a4.85 4.85 0 0 1-1.06-.19z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/AsliMillsCo/" target="_blank" rel="noopener" class="fsoc" data-brand="facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aslimills/" target="_blank" rel="noopener" class="fsoc" data-brand="instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/252634838880" target="_blank" rel="noopener" class="fsoc" data-brand="whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="fcol-title">Quick Links</div>
+        <div class="fcol-list">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="fcol-title">Opening Hours</div>
+        <div class="fcol-list">
+          <span>Saturday to Thursday</span>
+          <span>10 AM – 11 PM</span>
+          <span style="color:rgba(255,255,255,.28);font-size:12px">Friday: Closed</span>
+          <span style="color:rgba(255,255,255,.28);font-size:12px">Open 6 days a week</span>
+        </div>
+      </div>
+      <div>
+        <div class="fcol-title">Contact Us</div>
+        <div class="fcol-list">
+          <div class="fcontact-row"><span class="fcontact-icon">📞</span><a href="tel:+252634838880">+252 634 838 880</a></div>
+          <div class="fcontact-row"><span class="fcontact-icon">📞</span><a href="tel:+252633821484">+252 633 821 484</a></div>
+          <div class="fcontact-row"><span class="fcontact-icon">✉️</span><a href="mailto:info@aslimills.com">info@aslimills.com</a></div>
+          <div class="fcontact-row"><span class="fcontact-icon">📍</span><span>Road No.1, Downtown<br>Hargeisa, Somaliland</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Asli Mills. All Rights Reserved.</span>
+      <span>Made with 🌿 in Somaliland</span>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL OVERLAY -->
+  <div class="pd-overlay" id="pdOverlay" role="dialog" aria-modal="true">
+    <nav class="pd-nav">
+      <button type="button" class="pd-back" id="pdBack">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Back to Products
+      </button>
+    </nav>
+    <div class="pd-body">
+      <div class="pd-img-wrap">
+        <img src="" alt="" class="pd-img" id="pdImg">
+      </div>
+      <div class="pd-info">
+        <div class="pd-tag" id="pdTag"></div>
+        <div class="pd-name" id="pdName"></div>
+        <div class="pd-vol" id="pdVol"></div>
+        <div class="pd-stars">★★★★★</div>
+        <div class="pd-divider"></div>
+        <div class="pd-section-label">About This Product</div>
+        <p class="pd-desc" id="pdDesc"></p>
+        <div class="pd-divider"></div>
+        <div class="pd-section-label">Key Benefits</div>
+        <div class="pd-benefits" id="pdBenefits"></div>
+        <a href="#" target="_blank" rel="noopener" class="btn-wa-pd" id="pdWA">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── heart toggle ────────────────────────── */
+    document.querySelectorAll('.pcard-heart').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const saved = btn.classList.toggle('saved');
+        btn.textContent = saved ? '♥' : '♡';
+        btn.setAttribute('aria-label', saved ? 'Saved' : 'Save');
+        btn.style.transform = 'scale(1.3)';
+        setTimeout(() => { btn.style.transform = ''; }, 160);
+      });
+    });
+
+    /* ── mobile nav burger ───────────────────── */
+    const navBurger = document.getElementById('navBurger');
+    const navLinksEl = document.querySelector('.nav-links');
+    navBurger.addEventListener('click', () => {
+      const isOpen = navLinksEl.classList.toggle('nav-open');
+      navBurger.classList.toggle('open', isOpen);
+      navBurger.setAttribute('aria-expanded', String(isOpen));
+      navBurger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    /* close on nav link click or scroll */
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinksEl.classList.remove('nav-open');
+        navBurger.classList.remove('open');
+        navBurger.setAttribute('aria-expanded', 'false');
+        navBurger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      if (navLinksEl.classList.contains('nav-open')) {
+        navLinksEl.classList.remove('nav-open');
+        navBurger.classList.remove('open');
+        navBurger.setAttribute('aria-expanded', 'false');
+        navBurger.setAttribute('aria-label', 'Open menu');
+      }
+    }, { passive: true });
+
+    /* ── product detail overlay ─────────────── */
+    const pdData = {
+      'Asli Mills Face Mask': {
+        tag: 'Rice Brightening', vol: 'Natural Powder',
+        img: 'products/face-mask.jpg',
+        desc: 'Our signature brightening mask combines finely milled rice powder with time-tested Somali botanicals. Gently dissolves surface impurities, brightens uneven skin tone, and leaves behind a silky, luminous finish that lasts all day.',
+        benefits: ['Brightens dark spots and hyperpigmentation','Exfoliates gently without irritation','Reveals softer, more even-toned skin','Suitable for all skin types'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20the%20Face%20Mask.'
+      },
+      'Qasil': {
+        tag: 'Traditional Powder · 80g', vol: 'Wt 80g',
+        img: 'products/qasil.jpeg',
+        desc: 'Qasil is the most celebrated beauty secret from Somaliland, passed down through generations of women. Made from the leaves of the Gob tree, this fine green powder cleanses deeply, tightens pores, and leaves the skin visibly softer and more radiant.',
+        benefits: ['Deeply cleanses and purifies pores','Evens skin tone over time','Natural antibacterial properties','Suitable for oily and combination skin'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Qasil.'
+      },
+      'Henna': {
+        tag: 'Natural Colouring', vol: 'Natural Product',
+        img: 'products/henna.jpg',
+        desc: "Pure, finely ground henna sourced from Somaliland's ancient groves. Used for centuries across the Horn of Africa for hair conditioning and natural colouring — completely chemical-free and rich in natural pigment.",
+        benefits: ['Naturally conditions and strengthens hair','Adds rich, long-lasting natural colour','Helps reduce hair breakage','100% free from chemicals and additives'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Henna.'
+      },
+      'Eucalyptus Oil': {
+        tag: 'Cold-Pressed Oil · 30ml', vol: 'Vol 30ml',
+        img: 'products/eucalyptus-oil.jpeg',
+        desc: "Cold-pressed from fresh eucalyptus leaves with powerful antibacterial, anti-inflammatory, and antiseptic properties. From soothing irritated skin to clearing congestion, it's one of nature's most effective multi-purpose remedies.",
+        benefits: ['Antibacterial and antiseptic properties','Soothes irritated or inflamed skin','Refreshing natural cooling sensation','Use topically or as aromatherapy'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Eucalyptus%20Oil.'
+      },
+      'Neem Oil': {
+        tag: 'Pure Cold-Pressed · 30ml', vol: 'Vol 30ml',
+        img: 'products/neem-oil.jpg',
+        desc: "Dubbed nature's pharmacy, Neem Oil is one of the most potent plant-based skincare ingredients. Cold-pressed from wild neem seeds — unrefined and packed with fatty acids, antioxidants, and antibacterial compounds that work fast.",
+        benefits: ['Clears acne and blemishes effectively','Fades dark spots and discolouration','Deeply nourishes dry or damaged skin','Rich in antioxidants and essential fatty acids'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Neem%20Oil.'
+      },
+      'Face Pack': {
+        tag: 'Herbal Blend · 50g', vol: 'Wt 50g',
+        img: 'products/face-pack.jpeg',
+        desc: 'A powerful herbal face pack formulated from a carefully curated blend of Somali botanicals. Each ingredient is chosen for its ability to draw out impurities, restore natural radiance, and support healthy, balanced skin.',
+        benefits: ['Draws out deep-seated impurities','Tightens pores and firms skin texture','Delivers instant brightening effect','Made entirely from natural botanicals'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20the%20Face%20Pack.'
+      },
+      'Frankincense Boswellia-Carterii': {
+        tag: 'Raw Resin', vol: 'Raw Resin',
+        img: 'products/frankincense.jpg',
+        desc: "Harvested by hand from ancient Boswellia trees in Somaliland, our Frankincense resin is one of the world's most prized botanical extracts. Used by Somali women for generations to maintain youthful, glowing skin.",
+        benefits: ['Reduces appearance of fine lines and wrinkles','Repairs and regenerates damaged skin cells','Anti-inflammatory and deeply calming','Sustainably harvested from ancient Somali forests'],
+        wa: 'https://wa.me/252634838880?text=Hi!%20I%27d%20like%20to%20order%20Frankincense%20Boswellia.'
+      }
+    };
+
+    const pdOverlay = document.getElementById('pdOverlay');
+
+    document.querySelectorAll('.pcard').forEach(card => {
+      const name = card.querySelector('.pcard-name').textContent.trim();
+      if (!pdData[name]) return;
+      card.addEventListener('click', e => {
+        if (e.target.closest('.pcard-heart, .btn-wa-card')) return;
+        const p = pdData[name];
+        document.getElementById('pdImg').src = p.img;
+        document.getElementById('pdImg').alt = name;
+        document.getElementById('pdTag').textContent = p.tag;
+        document.getElementById('pdName').textContent = name;
+        document.getElementById('pdVol').textContent = p.vol;
+        document.getElementById('pdDesc').textContent = p.desc;
+        document.getElementById('pdBenefits').innerHTML = p.benefits.map(b => `<div class="pd-benefit">${b}</div>`).join('');
+        document.getElementById('pdWA').href = p.wa;
+        pdOverlay.classList.add('pd-open');
+        document.body.style.overflow = 'hidden';
+        pdOverlay.scrollTop = 0;
+      });
+    });
+
+    document.getElementById('pdBack').addEventListener('click', () => {
+      pdOverlay.classList.remove('pd-open');
+      document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && pdOverlay.classList.contains('pd-open')) {
+        pdOverlay.classList.remove('pd-open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* ── spotlight tabs ──────────────────────── */
+    document.querySelectorAll('.spotlight-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const panel = tab.dataset.tab;
+        document.querySelectorAll('.spotlight-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.spotlight-tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + panel).classList.add('active');
+      });
+    });
+
+    /* ── nav scroll class ─────────────────────── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    /* ── smooth anchor offset + active nav ──── */
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function setActive(href) {
+      navLinks.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === href));
+    }
+
+    navLinks.forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) {
+          e.preventDefault();
+          setActive(a.getAttribute('href'));
+          window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 80, behavior: 'smooth' });
+        }
+      });
+    });
+
+    /* highlight nav link matching the section in view */
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive('#' + entry.target.id);
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(s => sectionObserver.observe(s));
+
+    /* ── scroll reveal ───────────────────────── */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.pcard').forEach((c, i) => {
+      c.style.animationDelay = `${i * 55}ms`;
+      io.observe(c);
+    });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ── steps: staggered card entrance + connecting line ── */
+    const hiwWrap = document.getElementById('hiwWrap');
+    const hiwCards = hiwWrap.querySelectorAll('.hiw-card');
+
+    const hiwObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        /* reveal connecting line first */
+        hiwWrap.classList.add('line-visible');
+        /* stagger each card: 70ms apart, badge pops after card settles */
+        hiwCards.forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('hiw-in');
+          }, i * 70);
+        });
+        hiwObserver.disconnect();
+      });
+    }, { threshold: 0.15 });
+
+    hiwObserver.observe(hiwWrap);
+
+    /* ── infinite review marquee ─────────────── */
+    const reviews = [
+      { name: "Faadumo Ahmed",    loc: "Hargeisa",   stars: 5, text: "The Qasil powder has completely transformed my skin. Softer, brighter, and more even in just two weeks. I'll never go back to chemical products." },
+      { name: "Gulaid Ali",       loc: "Somaliland",  stars: 5, text: "Asli Mills is the real deal. Their Frankincense oil is pure and potent — my skin has never looked this good at 40. Highly recommend!" },
+      { name: "Hodan Osman",      loc: "Berbera",     stars: 5, text: "The Face Pack is amazing — leaves my skin glowing for days. And ordering via WhatsApp is so easy, they reply within minutes!" },
+      { name: "Abdirahman Warsame", loc: "Hargeisa", stars: 5, text: "I bought the Myrrh Oil for a stubborn scar and it has faded incredibly over 3 months. Completely natural, completely effective." },
+      { name: "Nimo Hassan",      loc: "Borama",      stars: 5, text: "My mother used Qasil her whole life and now I understand why. Asli Mills' quality is exceptional — the powder is so fine and fresh." },
+      { name: "Sahra Idle",       loc: "Hargeisa",    stars: 5, text: "The Neem Oil cleared my acne in under a month. I was skeptical, but this is genuinely the best skincare I've ever used." },
+      { name: "Mahad Jama",       loc: "Somaliland",  stars: 5, text: "Fast delivery, great packaging, and products that actually work. Asli Mills has earned a lifetime customer. The Henna is especially wonderful." },
+      { name: "Ifrah Mohamed",    loc: "Hargeisa",    stars: 5, text: "Frankincense Boswellia is a gem. The scent is divine and it's done wonders for the fine lines on my forehead. Worth every shilling." },
+      { name: "Khadar Yusuf",     loc: "Burao",       stars: 5, text: "I gifted the Face Mask set to my wife and she loved it. Even better — she's already ordered three more. Asli Mills never disappoints." },
+      { name: "Asha Farah",       loc: "Hargeisa",    stars: 5, text: "Their products are genuinely 100% natural — you can tell by the texture and smell. The Qasil Face Pack is now a weekly ritual for me." },
+    ];
+
+    function buildCard(r) {
+      return `<div class="review-card">
+        <div class="review-stars">${'★'.repeat(r.stars)}</div>
+        <p class="review-text">"${r.text}"</p>
+        <div class="review-author">
+          <span class="review-name">${r.name}</span>
+          <span class="review-meta">${r.loc} · Verified Customer</span>
+        </div>
+      </div>`;
+    }
+
+    function fillRow(id, items) {
+      /* duplicate twice so the seam is invisible during loop */
+      const html = items.map(buildCard).join('');
+      document.getElementById(id).innerHTML = html + html;
+    }
+
+    /* Row 1: first 5, Row 2: last 5 (different sets for variety) */
+    fillRow('row1', reviews.slice(0, 5).concat(reviews.slice(5)));
+    fillRow('row2', reviews.slice(5).concat(reviews.slice(0, 5)));
+  </script>
+</body>
+</html>
+
+

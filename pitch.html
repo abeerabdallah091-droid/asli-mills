@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Asli Mills — New Website Pitch</title>
+  <meta name="description" content="See why the new Asli Mills website changes everything.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    :root {
+      --g900: #0D2B1A;
+      --g800: #1B4332;
+      --g700: #2D6A4F;
+      --g400: #52B788;
+      --g100: #D8F3DC;
+      --g50:  #F0FAF3;
+      --gold: #C9963A;
+      --gold-bg: rgba(201,150,58,.1);
+      --white: #FFFFFF;
+      --off:   #FAFAF8;
+      --gray1: #EBEBEA;
+      --gray4: #9C9C9A;
+      --gray6: #5C5C5A;
+      --gray9: #1A1A18;
+      --wa:    #25D366;
+      --wa-dk: #128C7E;
+      --ease:  cubic-bezier(0.23, 1, 0.32, 1);
+      --r-sm: 10px; --r-md: 16px; --r-lg: 22px; --r-xl: 28px; --r-full: 9999px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #08110a;
+      color: var(--gray9);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── WRAPPER — phone column, centered ─── */
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ── REVEAL SYSTEM ───────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 450ms var(--ease), transform 450ms var(--ease);
+    }
+    .reveal.vis { opacity: 1; transform: translateY(0); }
+    .reveal[data-d="1"] { transition-delay: 70ms; }
+    .reveal[data-d="2"] { transition-delay: 140ms; }
+    .reveal[data-d="3"] { transition-delay: 210ms; }
+    .reveal[data-d="4"] { transition-delay: 280ms; }
+    .reveal[data-d="5"] { transition-delay: 350ms; }
+    .reveal[data-d="6"] { transition-delay: 420ms; }
+    .reveal[data-d="7"] { transition-delay: 490ms; }
+
+    /* ── SECTION LABEL ───────────────────── */
+    .eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 9px;
+    }
+    .eyebrow::before { content:''; display:block; width:16px; height:2px; border-radius:2px; background:currentColor; }
+    .eyebrow.gold { color: var(--gold); }
+    .eyebrow.white { color: rgba(255,255,255,.5); }
+    .eyebrow.green { color: var(--g700); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 01 — COVER                           */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .cover {
+      position: relative;
+      min-height: 92svh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      overflow: hidden;
+    }
+    .cover-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 60% center;
+      z-index: 0;
+    }
+    .cover::before {
+      content:'';
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        to top,
+        rgba(5,14,7,.98) 0%,
+        rgba(5,14,7,.82) 42%,
+        rgba(5,14,7,.35) 72%,
+        transparent 100%
+      );
+    }
+    .cover-blob {
+      position: absolute; border-radius: 50%; filter: blur(90px);
+      pointer-events: none; z-index: 0;
+    }
+    .cb1 { width:420px; height:420px; background:radial-gradient(circle,rgba(45,106,79,.55),transparent 65%); top:-140px; left:-80px; animation:cb1 18s ease-in-out infinite alternate; }
+    .cb2 { width:320px; height:320px; background:radial-gradient(circle,rgba(201,150,58,.2),transparent 65%); bottom:-80px; right:-60px; animation:cb2 22s ease-in-out infinite alternate; animation-delay:-9s; }
+    @keyframes cb1 { to { translate: 40px 30px; } }
+    @keyframes cb2 { to { translate: -30px -25px; } }
+    @media (prefers-reduced-motion:reduce) { .cover-blob { animation:none !important; } }
+
+    .cover-body {
+      position: relative; z-index: 2;
+      padding: 0 28px 44px;
+      animation: coverIn 700ms var(--ease) both;
+    }
+    @keyframes coverIn { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+    .cover-tag {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(201,150,58,.15);
+      border: 1px solid rgba(201,150,58,.3);
+      border-radius: var(--r-full);
+      padding: 5px 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .cover-tag-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+
+    .cover-h {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44px; font-weight: 900;
+      line-height: 1.06; letter-spacing: -1.5px; color: #fff;
+      margin-bottom: 14px;
+    }
+    .cover-h em { font-style: italic; color: var(--gold); }
+
+    .cover-sub {
+      font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 28px;
+    }
+
+    .cover-stats {
+      display: flex; gap: 0;
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 22px; margin-top: 4px;
+    }
+    .cover-stat {
+      flex: 1; text-align: center;
+      padding: 0 8px;
+    }
+    .cover-stat + .cover-stat { border-left: 1px solid rgba(255,255,255,.1); }
+    .cstat-n { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 900; color: #fff; letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+    .cstat-l { font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: 0.06em; text-transform: uppercase; }
+
+    .scroll-hint {
+      position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+      z-index: 2;
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+      font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+      animation: scrollHint 2s ease-in-out 1.4s infinite;
+    }
+    .scroll-hint svg { width: 14px; height: 14px; }
+    @keyframes scrollHint { 0%,100%{transform:translateX(-50%) translateY(0);opacity:.3;} 50%{transform:translateX(-50%) translateY(5px);opacity:.7;} }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 02 — PROBLEM                         */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .problem {
+      background: var(--off);
+      padding: 56px 24px 52px;
+    }
+    .problem-head { margin-bottom: 28px; }
+    .problem-h { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 900; letter-spacing: -0.6px; line-height: 1.12; margin-top: 10px; color: var(--gray9); }
+    .problem-sub { font-size: 13px; color: var(--gray6); line-height: 1.7; margin-top: 8px; }
+
+    .plist { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+    .pitem {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--white); border: 1.5px solid var(--gray1);
+      border-radius: var(--r-md); padding: 15px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    .pitem-icon { font-size: 18px; flex-shrink: 0; }
+    .pitem-txt { flex: 1; }
+    .pitem-txt strong { display: block; font-size: 13px; font-weight: 700; color: var(--gray9); margin-bottom: 2px; }
+    .pitem-txt span { font-size: 11px; color: var(--gray4); line-height: 1.4; }
+    .pitem-x {
+      width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%;
+      background: #fee2e2; color: #ef4444;
+      font-size: 11px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 03 — DIVIDER — "NOW FIXED"           */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .divider-band {
+      background: var(--g800);
+      padding: 20px 24px;
+      display: flex; align-items: center; gap: 14px;
+      overflow: hidden;
+    }
+    .db-icon { font-size: 24px; flex-shrink: 0; }
+    .db-text { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #fff; line-height: 1.4; }
+    .db-text span { color: var(--gold); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 04 — FEATURES                        */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .features {
+      background: var(--g900);
+      padding: 56px 24px 52px;
+    }
+    .features-head { margin-bottom: 32px; }
+    .features-h { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 900; letter-spacing: -0.6px; line-height: 1.12; margin-top: 10px; color: #fff; }
+
+    .flist { display: flex; flex-direction: column; gap: 12px; }
+    .fitem {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--r-md); padding: 18px 16px;
+      transition: background 200ms var(--ease), border-color 200ms var(--ease);
+    }
+    .fitem-icon {
+      width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px;
+      background: rgba(201,150,58,.14); border: 1px solid rgba(201,150,58,.22);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .fitem-txt { flex: 1; padding-top: 1px; }
+    .fitem-txt strong { display: block; font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .fitem-txt span { font-size: 12px; color: rgba(255,255,255,.55); line-height: 1.55; }
+    .fitem-check {
+      width: 20px; height: 20px; flex-shrink: 0; border-radius: 50%; margin-top: 2px;
+      background: rgba(82,183,136,.18); border: 1px solid rgba(82,183,136,.3);
+      color: var(--g400); font-size: 10px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 05 — PRODUCT GALLERY                 */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .gallery-section {
+      background: var(--off);
+      padding: 56px 24px 52px;
+    }
+    .gallery-head { margin-bottom: 28px; }
+    .gallery-h { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 900; letter-spacing: -0.6px; line-height: 1.12; margin-top: 10px; color: var(--gray9); }
+    .gallery-sub { font-size: 13px; color: var(--gray6); line-height: 1.65; margin-top: 8px; }
+
+    /* big hero product */
+    .gallery-hero {
+      border-radius: var(--r-xl); overflow: hidden;
+      position: relative; margin-bottom: 10px;
+      aspect-ratio: 4/3;
+      background: #EDE8DF;
+    }
+    .gallery-hero img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 500ms var(--ease);
+    }
+    .gallery-hero-label {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+      padding: 32px 20px 18px;
+      background: linear-gradient(to top, rgba(5,14,7,.85), transparent);
+    }
+    .ghl-name { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -0.3px; }
+    .ghl-sub { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; color: rgba(255,255,255,.55); margin-top: 3px; letter-spacing: 0.06em; }
+    .ghl-stars { color: var(--gold); font-size: 11px; letter-spacing: 2px; margin-top: 4px; }
+
+    /* small grid */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    }
+    .gallery-card {
+      border-radius: var(--r-md); overflow: hidden;
+      background: #EDE8DF;
+      position: relative;
+    }
+    .gallery-card-img {
+      aspect-ratio: 1;
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 420ms var(--ease);
+    }
+    .gallery-card-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 16px 8px 8px;
+      background: linear-gradient(to top, rgba(5,14,7,.82), transparent);
+    }
+    .gcl-name { font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700; color: #fff; letter-spacing: 0.02em; line-height: 1.3; }
+    .gcl-stars { color: var(--gold); font-size: 8px; margin-top: 2px; }
+
+    /* 4th image — "more" overlay */
+    .gallery-card.more .gallery-card-img { filter: brightness(0.35); }
+    .gallery-card.more::after {
+      content: '+4 More';
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px; font-weight: 900; color: #fff;
+      letter-spacing: -0.2px;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 06 — SCREEN PREVIEWS                 */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .previews {
+      background: var(--g800);
+      padding: 56px 24px 52px;
+    }
+    .previews-head { margin-bottom: 28px; }
+    .previews-h { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 900; letter-spacing: -0.6px; line-height: 1.12; margin-top: 10px; color: #fff; }
+    .previews-sub { font-size: 13px; color: rgba(255,255,255,.55); line-height: 1.65; margin-top: 8px; }
+
+    .preview-strip {
+      display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .preview-strip::-webkit-scrollbar { display: none; }
+    .preview-item {
+      flex: 0 0 68%; scroll-snap-align: start;
+      border-radius: var(--r-lg); overflow: hidden;
+      background: #EDE8DF;
+      border: 2px solid rgba(255,255,255,.08);
+    }
+    .preview-item img { width: 100%; height: 240px; object-fit: cover; object-position: top center; display: block; }
+    .preview-cap {
+      padding: 12px 14px;
+      background: rgba(255,255,255,.07);
+      font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,.6);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 07 — TRUST NUMBERS                   */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .numbers {
+      background: var(--gray9);
+      padding: 52px 24px;
+    }
+    .numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+    .num-card {
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--r-lg); padding: 22px 18px;
+    }
+    .num-n { font-family: 'Playfair Display', Georgia, serif; font-size: 38px; font-weight: 900; color: var(--gold); letter-spacing: -1px; line-height: 1; margin-bottom: 6px; }
+    .num-l { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 6px; }
+    .num-d { font-size: 12px; color: rgba(255,255,255,.4); line-height: 1.5; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* 08 — CTA                             */
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .cta-section {
+      background: #08110a;
+      padding: 64px 24px calc(64px + env(safe-area-inset-bottom, 0px));
+      position: relative; overflow: hidden;
+    }
+    .cta-blob-1 { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; width:300px; height:300px; background:radial-gradient(circle,rgba(45,106,79,.5),transparent 65%); top:-100px; left:-80px; }
+    .cta-blob-2 { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; width:240px; height:240px; background:radial-gradient(circle,rgba(201,150,58,.2),transparent 65%); bottom:-60px; right:-60px; }
+
+    .cta-inner { position: relative; z-index: 2; }
+    .cta-h { font-family: 'Playfair Display', Georgia, serif; font-size: 34px; font-weight: 900; letter-spacing: -0.8px; line-height: 1.1; color: #fff; margin-top: 10px; margin-bottom: 14px; }
+    .cta-h em { font-style: italic; color: var(--gold); }
+    .cta-sub { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 32px; }
+
+    .btn-wa {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--wa); color: #fff;
+      font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 800;
+      padding: 18px 28px; border-radius: var(--r-full); width: 100%;
+      box-shadow: 0 4px 24px rgba(37,211,102,.4);
+      transition: transform 160ms var(--ease), background 160ms, box-shadow 160ms;
+      margin-bottom: 12px;
+    }
+    .btn-wa:active { transform: scale(0.97); }
+    @media (hover:hover) and (pointer:fine) {
+      .btn-wa:hover { background: var(--wa-dk); box-shadow: 0 6px 32px rgba(37,211,102,.55); transform: translateY(-2px); }
+    }
+
+    .btn-site {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: rgba(255,255,255,.08); color: rgba(255,255,255,.8);
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
+      padding: 16px 28px; border-radius: var(--r-full); width: 100%;
+      border: 1.5px solid rgba(255,255,255,.18);
+      transition: transform 160ms var(--ease), background 160ms, border-color 160ms;
+    }
+    .btn-site:active { transform: scale(0.97); }
+    @media (hover:hover) and (pointer:fine) {
+      .btn-site:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.3); }
+    }
+
+    .cta-credit {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 500; letter-spacing: 0.06em;
+      color: rgba(255,255,255,.2); text-align: center; margin-top: 28px;
+    }
+
+    /* ── TICKER at top ───────────────────── */
+    .ticker {
+      background: var(--g800); overflow: hidden;
+      padding: 10px 0; position: sticky; top: 0; z-index: 100;
+    }
+    .ticker-track {
+      display: inline-flex; align-items: center; gap: 0; white-space: nowrap;
+      animation: tick 22s linear infinite;
+    }
+    @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .ticker-item {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      color: rgba(255,255,255,.5); padding: 0 20px;
+    }
+    .ticker-dot { color: var(--gold); padding: 0 4px; font-size: 10px; }
+    @media (prefers-reduced-motion:reduce) { .ticker-track { animation:none; } }
+
+    /* ── SEPARATOR LINE ──────────────────── */
+    .sep { height: 1px; background: rgba(255,255,255,.06); }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ── STICKY TICKER ──────────────────── -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Asli Mills</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">New Website</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">100% Natural</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">WhatsApp Ordering</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Since 1998</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Hargeisa, Somaliland</span><span class="ticker-dot">✦</span>
+      <!-- duplicate for loop -->
+      <span class="ticker-item">Asli Mills</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">New Website</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">100% Natural</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">WhatsApp Ordering</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Since 1998</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Hargeisa, Somaliland</span><span class="ticker-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 01 — COVER                           -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="cover">
+    <div class="cover-blob cb1"></div>
+    <div class="cover-blob cb2"></div>
+    <img
+      src="products/hero-eucalyptus.jpeg"
+      alt="Asli Mills natural eucalyptus skincare"
+      class="cover-img"
+      onerror="this.onerror=null;this.style.background='linear-gradient(135deg,#0D2B1A,#1B4332)';"
+    >
+    <div class="cover-body">
+      <div class="cover-tag"><span class="cover-tag-dot"></span>Website Reveal — 2026</div>
+      <h1 class="cover-h">Asli Mills<br>is <em>online.</em></h1>
+      <p class="cover-sub">A brand-new website built to match the quality of your products — and sell them around the clock.</p>
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <div class="cstat-n">1998</div>
+          <div class="cstat-l">Est. Hargeisa</div>
+        </div>
+        <div class="cover-stat">
+          <div class="cstat-n">8+</div>
+          <div class="cstat-l">Products</div>
+        </div>
+        <div class="cover-stat">
+          <div class="cstat-n">100%</div>
+          <div class="cstat-l">Organic</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Scroll
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 02 — THE PROBLEM                     -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="problem">
+    <div class="problem-head reveal">
+      <div class="eyebrow gold">The Problem</div>
+      <h2 class="problem-h">The old website was hurting sales</h2>
+      <p class="problem-sub">Your products are premium. Your old online presence didn't match. Here's what was broken:</p>
+    </div>
+    <div class="plist">
+      <div class="pitem reveal" data-d="1">
+        <div class="pitem-icon">📵</div>
+        <div class="pitem-txt">
+          <strong>No WhatsApp button</strong>
+          <span>Customers had to search for a way to contact you. Most just left.</span>
+        </div>
+        <div class="pitem-x">✗</div>
+      </div>
+      <div class="pitem reveal" data-d="2">
+        <div class="pitem-icon">📱</div>
+        <div class="pitem-txt">
+          <strong>Broken on mobile</strong>
+          <span>9 in 10 of your customers shop from their phone — the old site looked terrible on it.</span>
+        </div>
+        <div class="pitem-x">✗</div>
+      </div>
+      <div class="pitem reveal" data-d="3">
+        <div class="pitem-icon">🔍</div>
+        <div class="pitem-txt">
+          <strong>Invisible online</strong>
+          <span>No SEO, no OpenGraph tags — sharing the link on WhatsApp showed no preview image or title.</span>
+        </div>
+        <div class="pitem-x">✗</div>
+      </div>
+      <div class="pitem reveal" data-d="4">
+        <div class="pitem-icon">😐</div>
+        <div class="pitem-txt">
+          <strong>No trust signals</strong>
+          <span>No reviews, no customer count, nothing to make a first-time visitor feel safe to order.</span>
+        </div>
+        <div class="pitem-x">✗</div>
+      </div>
+      <div class="pitem reveal" data-d="5">
+        <div class="pitem-icon">🎨</div>
+        <div class="pitem-txt">
+          <strong>Design didn't match the brand</strong>
+          <span>Your Qasil and Frankincense deserve better than a generic-looking page.</span>
+        </div>
+        <div class="pitem-x">✗</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- DIVIDER                              -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="divider-band reveal">
+    <div class="db-icon">✦</div>
+    <div class="db-text">Every single problem above<br><span>is now fixed.</span></div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 03 — FEATURES                        -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="features">
+    <div class="features-head reveal">
+      <div class="eyebrow gold">What We Built</div>
+      <h2 class="features-h">Everything a premium brand needs</h2>
+    </div>
+    <div class="flist">
+      <div class="fitem reveal" data-d="1">
+        <div class="fitem-icon">💬</div>
+        <div class="fitem-txt">
+          <strong>WhatsApp on every product</strong>
+          <span>Every item has a direct order button. One tap — message pre-filled — order sent.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+      <div class="fitem reveal" data-d="2">
+        <div class="fitem-icon">📱</div>
+        <div class="fitem-txt">
+          <strong>Mobile-first design</strong>
+          <span>Built for phones first. Animated burger menu, fluid grids, perfect touch targets.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+      <div class="fitem reveal" data-d="3">
+        <div class="fitem-icon">🔍</div>
+        <div class="fitem-txt">
+          <strong>Full SEO & link previews</strong>
+          <span>Sharing the link on WhatsApp, Instagram, or Facebook now shows a beautiful preview card with photo and title.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+      <div class="fitem reveal" data-d="4">
+        <div class="fitem-icon">⭐</div>
+        <div class="fitem-txt">
+          <strong>Testimonials & trust bar</strong>
+          <span>Scrolling customer reviews, star ratings on every product, and a live trust badge strip.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+      <div class="fitem reveal" data-d="5">
+        <div class="fitem-icon">✨</div>
+        <div class="fitem-txt">
+          <strong>Premium animations</strong>
+          <span>Cards float in as you scroll, buttons react on press, products zoom on hover — every interaction feels alive.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+      <div class="fitem reveal" data-d="6">
+        <div class="fitem-icon">🎨</div>
+        <div class="fitem-txt">
+          <strong>Brand-matched design system</strong>
+          <span>Playfair Display + Montserrat + Inter, deep green & gold palette, glass effects — design that looks like luxury.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+      <div class="fitem reveal" data-d="7">
+        <div class="fitem-icon">🌍</div>
+        <div class="fitem-txt">
+          <strong>Hosted publicly — shareable link</strong>
+          <span>Live on GitHub Pages. Share the link in your bio, on WhatsApp, or in stories — it works everywhere, instantly.</span>
+        </div>
+        <div class="fitem-check">✓</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 04 — PRODUCT GALLERY                 -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="gallery-section">
+    <div class="gallery-head reveal">
+      <div class="eyebrow green">Your Products</div>
+      <h2 class="gallery-h">Now showcased beautifully</h2>
+      <p class="gallery-sub">Real photos from the site. Each product has a name, rating, volume, and instant WhatsApp order button.</p>
+    </div>
+
+    <!-- Hero product -->
+    <div class="gallery-hero reveal">
+      <img
+        src="products/hero-eucalyptus.jpeg"
+        alt="Eucalyptus Oil"
+        loading="lazy"
+        onerror="this.onerror=null;this.style.background='#1B4332';"
+      >
+      <div class="gallery-hero-label">
+        <div class="ghl-name">Eucalyptus Oil</div>
+        <div class="ghl-sub">Pure Essential Oil · 30ml</div>
+        <div class="ghl-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <!-- 3-column product grid -->
+    <div class="gallery-grid">
+      <div class="gallery-card reveal" data-d="1">
+        <img
+          src="products/about-hero.jpeg"
+          alt="Qasil"
+          class="gallery-card-img"
+          loading="lazy"
+          onerror="this.onerror=null;this.style.background='#2D6A4F';"
+        >
+        <div class="gallery-card-label">
+          <div class="gcl-name">Qasil</div>
+          <div class="gcl-stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="gallery-card reveal" data-d="2">
+        <img
+          src="products/Make_background_aesthetic_202605081923.jpeg"
+          alt="Face Mask"
+          class="gallery-card-img"
+          loading="lazy"
+          onerror="this.onerror=null;this.style.background='#C9963A';"
+        >
+        <div class="gallery-card-label">
+          <div class="gcl-name">Face Mask</div>
+          <div class="gcl-stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="gallery-card more reveal" data-d="3">
+        <img
+          src="products/Make_background_aesthetic_202605081945.jpeg"
+          alt="More products"
+          class="gallery-card-img"
+          loading="lazy"
+          onerror="this.onerror=null;this.style.background='#0D2B1A';"
+        >
+      </div>
+    </div>
+
+    <!-- product name chips -->
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;" class="reveal">
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Qasil 80g</span>
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Face Mask</span>
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Eucalyptus Oil</span>
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Neem Oil</span>
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Henna</span>
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Frankincense</span>
+      <span style="background:var(--g100);color:var(--g800);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:6px 12px;border-radius:99px;">Face Pack</span>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 05 — SCREEN PREVIEWS (scrollable)    -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="previews">
+    <div class="previews-head reveal">
+      <div class="eyebrow white">Live Site Screens</div>
+      <h2 class="previews-h">What visitors see</h2>
+      <p class="previews-sub">Swipe to see the hero, products, and how-it-works sections of the live site.</p>
+    </div>
+    <div class="preview-strip reveal">
+      <div class="preview-item">
+        <img
+          src="products/hero-eucalyptus.jpeg"
+          alt="Hero section"
+          onerror="this.onerror=null;this.style.background='#1B4332';"
+        >
+        <div class="preview-cap">Hero Section — First Impression</div>
+      </div>
+      <div class="preview-item">
+        <img
+          src="products/about-hero.jpeg"
+          alt="About section"
+          onerror="this.onerror=null;this.style.background='#2D6A4F';"
+        >
+        <div class="preview-cap">About — Brand Story</div>
+      </div>
+      <div class="preview-item">
+        <img
+          src="products/Make_background_aesthetic_202605081923.jpeg"
+          alt="Products section"
+          onerror="this.onerror=null;this.style.background='#C9963A';"
+        >
+        <div class="preview-cap">Products — Full Catalogue</div>
+      </div>
+      <div class="preview-item">
+        <img
+          src="products/give_me_something_to_image_202605091332.jpeg"
+          alt="Natural ingredients"
+          onerror="this.onerror=null;this.style.background='#0D2B1A';"
+        >
+        <div class="preview-cap">Natural Ingredients</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 06 — NUMBERS                         -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="numbers">
+    <div class="reveal">
+      <div class="eyebrow" style="color:rgba(255,255,255,.35);">Why It Matters</div>
+      <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:900;letter-spacing:-0.6px;color:#fff;margin-top:10px;">Numbers that sell the site</h2>
+    </div>
+    <div class="numbers-grid">
+      <div class="num-card reveal" data-d="1">
+        <div class="num-n">90%</div>
+        <div class="num-l">Mobile Shoppers</div>
+        <div class="num-d">This site is built for phones first.</div>
+      </div>
+      <div class="num-card reveal" data-d="2">
+        <div class="num-n">3s</div>
+        <div class="num-l">Time to Order</div>
+        <div class="num-d">Tap product → WhatsApp opens → done.</div>
+      </div>
+      <div class="num-card reveal" data-d="3">
+        <div class="num-n">2B+</div>
+        <div class="num-l">WhatsApp Users</div>
+        <div class="num-d">Your global sales channel, built in.</div>
+      </div>
+      <div class="num-card reveal" data-d="4">
+        <div class="num-n">25+</div>
+        <div class="num-l">Years Trusted</div>
+        <div class="num-d">Est. 1998 — the story is on the site.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- 07 — CTA                             -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="cta-section">
+    <div class="cta-blob-1"></div>
+    <div class="cta-blob-2"></div>
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="eyebrow gold">Ready</div>
+        <h2 class="cta-h">Your brand deserves a website <em>this good.</em></h2>
+        <p class="cta-sub">The site is live, mobile-perfect, and built to grow with you. Open it now and see it for yourself.</p>
+      </div>
+      <div class="reveal" data-d="1">
+        <a href="https://abeerabdallah091-droid.github.io/asli-mills" target="_blank" rel="noopener" class="btn-site" style="margin-bottom:12px;">
+          🌿 View the Live Website →
+        </a>
+        <a href="https://wa.me/252634838880?text=Hello%20Asli%20Mills!%20I%27d%20like%20to%20order." target="_blank" rel="noopener" class="btn-wa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </a>
+      </div>
+      <p class="cta-credit reveal" data-d="2">Designed by Abeer Abdallah Jama · abeerabdallah091@gmail.com</p>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+  // ── SCROLL REVEAL ──────────────────────────
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('vis');
+        // once visible, no need to keep observing
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+</body>
+</html>
