@@ -367,18 +367,155 @@
     .check::before { content: '✓ '; color: var(--green-700); font-weight: 800; }
     .cross::before { content: '✗ '; color: #ef4444; font-weight: 800; }
 
-    /* ── SLIDE 8 — CTA ───────────────────────── */
-    .s-cta { background: #08110a; text-align: center; }
-    .cta-inner { position: relative; z-index: 2; max-width: 700px; }
-    .cta-h { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(36px, 4.8vw, 72px); font-weight: 900; line-height: 1.06; letter-spacing: -2px; color: #fff; margin-bottom: 22px; }
-    .cta-h em { font-style: italic; color: var(--gold); }
-    .cta-sub { font-size: 17px; color: rgba(255,255,255,.6); line-height: 1.75; margin-bottom: 40px; }
-    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    /* ── SLIDE 8 — CTA (Emil-quality) ─────────── */
+    .s-cta { background: #05120a; text-align: center; overflow: hidden; }
+
+    /* Radial spotlight */
+    .cta-spotlight {
+      position: absolute; width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(45,106,79,.18) 0%, transparent 65%);
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      z-index: 1; pointer-events: none;
+    }
+
+    /* Giant ghost letterform behind everything */
+    .cta-bg-word {
+      position: absolute; z-index: 1; pointer-events: none;
+      font-family: 'Playfair Display', serif; font-weight: 900;
+      font-size: 40vw; color: transparent;
+      -webkit-text-stroke: 1px rgba(82,183,136,.04);
+      letter-spacing: -4vw; white-space: nowrap;
+      top: 50%; left: 50%; transform: translate(-50%,-52%);
+      -webkit-user-select: none; user-select: none; line-height: 1;
+    }
+
+    .cta-inner { position: relative; z-index: 2; max-width: 680px; }
+
+    /* Gold rule lines — draw left-to-right with clip-path */
+    .cta-rule {
+      width: 44px; height: 2px; background: var(--gold);
+      margin: 0 auto 18px; border-radius: 2px;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 650ms var(--ease-out);
+    }
+    .slide.active .cta-rule          { clip-path: inset(0 0% 0 0); transition-delay: 120ms; }
+    .slide.active .cta-rule.rule-bot { clip-path: inset(0 0% 0 0); transition-delay: 300ms; }
+    .cta-rule.rule-bot { margin-top: 16px; margin-bottom: 0; }
+
+    /* Eyebrow */
+    .cta-eyebrow-txt {
+      font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+      opacity: 0; transform: translateY(10px);
+      transition: opacity 500ms var(--ease-out), transform 500ms var(--ease-out);
+    }
+    .slide.active .cta-eyebrow-txt { opacity: 1; transform: translateY(0); transition-delay: 220ms; }
+
+    /* Heading — each line slides up from behind its overflow:hidden parent */
+    .cta-headline { margin: 26px 0 22px; }
+    .cta-line-wrap { display: block; overflow: hidden; }
+    .cta-line-inner {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 5vw, 76px); font-weight: 900;
+      color: #fff; line-height: 1.07; letter-spacing: -2.5px;
+      transform: translateY(108%);
+      transition: transform 720ms var(--ease-out);
+    }
+    .cta-line-inner em { font-style: italic; color: var(--gold); }
+    .slide.active .cta-line-wrap:nth-child(1) .cta-line-inner { transform: translateY(0); transition-delay: 360ms; }
+    .slide.active .cta-line-wrap:nth-child(2) .cta-line-inner { transform: translateY(0); transition-delay: 500ms; }
+
+    /* Subtitle */
+    .cta-sub-txt {
+      font-size: 16px; color: rgba(255,255,255,.52); line-height: 1.8;
+      max-width: 510px; margin: 0 auto 28px;
+      opacity: 0; transform: translateY(14px);
+      transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out);
+    }
+    .slide.active .cta-sub-txt { opacity: 1; transform: translateY(0); transition-delay: 620ms; }
+
+    /* Feature pills — spring entrance */
+    .cta-pills { display: flex; gap: 9px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+    .cta-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px; padding: 8px 15px;
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,.65); letter-spacing: .04em;
+      opacity: 0; transform: scale(0.86) translateY(10px);
+      transition: opacity 380ms var(--ease-out), transform 380ms var(--ease-spring),
+                  background 180ms, border-color 180ms;
+    }
+    .cta-pill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green-400); flex-shrink: 0; }
+    .slide.active .cta-pill { opacity: 1; transform: scale(1) translateY(0); }
+    .slide.active .cta-pill:nth-child(1) { transition-delay: 680ms; }
+    .slide.active .cta-pill:nth-child(2) { transition-delay: 750ms; }
+    .slide.active .cta-pill:nth-child(3) { transition-delay: 820ms; }
+    @media (hover:hover) and (pointer:fine) {
+      .cta-pill:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.2); }
+    }
+
+    /* Buttons */
+    .cta-btns {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+      opacity: 0; transform: translateY(14px);
+      transition: opacity 480ms var(--ease-out), transform 480ms var(--ease-out);
+    }
+    .slide.active .cta-btns { opacity: 1; transform: translateY(0); transition-delay: 860ms; }
+
+    /* Gold CTA button — glow via opacity on ::after (GPU-only, no box-shadow in keyframe) */
+    @keyframes gold-glow {
+      0%, 100% { opacity: 0; }
+      55%       { opacity: 0.55; }
+    }
+    .btn-gold-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--gold); color: #071a0d;
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800;
+      padding: 18px 36px; border-radius: 999px; letter-spacing: .02em;
+      box-shadow: 0 4px 24px rgba(201,150,58,.45);
+      transition: transform 160ms var(--ease-out), filter 160ms;
+      position: relative;
+    }
+    .btn-gold-cta::after {
+      content: ''; position: absolute; inset: -3px; border-radius: 999px;
+      background: var(--gold); filter: blur(20px);
+      opacity: 0; z-index: -1;
+      animation: gold-glow 2.6s var(--ease-in-out) infinite 1400ms;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .btn-gold-cta:hover { transform: translateY(-3px); filter: brightness(1.1); }
+    }
+    .btn-gold-cta:active { transform: scale(0.97); filter: blur(0.8px) brightness(.95); }
+
+    /* Ghost CTA button */
+    .btn-ghost-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: rgba(255,255,255,.65);
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600;
+      padding: 18px 32px; border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,.16);
+      transition: transform 160ms var(--ease-out), background 200ms, border-color 200ms, color 200ms;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .btn-ghost-cta:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.3); color: #fff; }
+    }
+    .btn-ghost-cta:active { transform: scale(0.97); }
+
+    /* Credit */
+    .cta-credit-txt {
+      font-size: 10px; color: rgba(255,255,255,.18); margin-top: 42px;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 600ms var(--ease-out);
+    }
+    .slide.active .cta-credit-txt { opacity: 1; transition-delay: 1100ms; }
+
+    /* Keep old names for safety — point to new names */
     .btn-gold { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--gray-900); font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; padding: 17px 34px; border-radius: 999px; box-shadow: 0 4px 24px rgba(201,150,58,.45); transition: transform 160ms var(--ease-out), box-shadow 160ms, filter 160ms; }
-    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(201,150,58,.52); filter: brightness(1.08); }
     .btn-gold:active { transform: scale(0.97); }
     .btn-ghost { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: rgba(255,255,255,.75); font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; padding: 17px 30px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,.2); transition: transform 160ms var(--ease-out), background 160ms, border-color 160ms; }
-    .btn-ghost:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.35); }
     .btn-ghost:active { transform: scale(0.97); }
     .cta-credit { font-size: 11px; color: rgba(255,255,255,.22); margin-top: 48px; letter-spacing: 0.06em; }
 
@@ -694,22 +831,54 @@
     </div>
   </section>
 
-  <!-- SLIDE 8 — CTA (was 7) -->
+  <!-- SLIDE 8 — CTA -->
   <section class="slide s-cta" data-title="Ready to Launch">
+    <!-- Animated blobs -->
     <div class="blobs">
-      <div class="blob blob-1" style="animation-delay:-4s;"></div>
-      <div class="blob blob-2" style="animation-delay:-12s;"></div>
-      <div class="blob blob-3" style="animation-delay:-20s;"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
     </div>
+    <!-- Radial spotlight + ghost background word -->
+    <div class="cta-spotlight"></div>
+    <div class="cta-bg-word">ASLI</div>
+
     <div class="cta-inner">
-      <div class="eyebrow light center anim-el"><span></span> Ready to Launch <span></span></div>
-      <h2 class="cta-h anim-el">Your Brand Deserves<br>a Website <em>This Good</em></h2>
-      <p class="cta-sub anim-el">Asli Mills products are natural, high quality, and made with care. Now the website finally matches that standard.</p>
-      <div class="cta-actions anim-el">
-        <a href="https://horumar-solution.github.io/asli-mills/" class="btn-gold" target="_blank" rel="noopener">View the Live Site →</a>
-        <a href="https://horumar-solution.github.io/Abeer-Abdallah-Jama.index.html" target="_blank" rel="noopener" class="btn-ghost">Horumar Portfolio →</a>
+
+      <!-- Rule + eyebrow + rule -->
+      <div class="cta-rule"></div>
+      <div class="cta-eyebrow-txt">Hargeisa's Most Trusted · Since 1998</div>
+      <div class="cta-rule rule-bot"></div>
+
+      <!-- Eye-catching headline — line-by-line curtain reveal -->
+      <h2 class="cta-headline">
+        <span class="cta-line-wrap">
+          <span class="cta-line-inner">Natural Products.</span>
+        </span>
+        <span class="cta-line-wrap">
+          <span class="cta-line-inner"><em>Premium Presence.</em></span>
+        </span>
+      </h2>
+
+      <!-- Subtitle -->
+      <p class="cta-sub-txt">Asli Mills has been crafting pure, natural skincare since 1998. Now every customer in Hargeisa — and beyond — can discover, trust, and order in seconds.</p>
+
+      <!-- Feature pills — spring entrance -->
+      <div class="cta-pills">
+        <div class="cta-pill"><div class="cta-pill-dot"></div>100% Organic Always</div>
+        <div class="cta-pill"><div class="cta-pill-dot"></div>WhatsApp Ordering</div>
+        <div class="cta-pill"><div class="cta-pill-dot"></div>Mobile-First Design</div>
       </div>
-      <p class="cta-credit anim-el">Designed by Horumar Solution · abeerabdallah091@gmail.com · 2026</p>
+
+      <!-- Buttons -->
+      <div class="cta-btns">
+        <a href="https://horumar-solution.github.io/asli-mills/" class="btn-gold-cta" target="_blank" rel="noopener">View the Live Site →</a>
+        <a href="https://horumar-solution.github.io/Abeer-Abdallah-Jama.index.html" target="_blank" rel="noopener" class="btn-ghost-cta">Horumar Portfolio →</a>
+      </div>
+
+      <!-- Credit -->
+      <p class="cta-credit-txt">Designed by Horumar Solution · abeerabdallah091@gmail.com · 2026</p>
+
     </div>
   </section>
 
