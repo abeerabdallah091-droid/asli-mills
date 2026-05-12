@@ -382,6 +382,167 @@
     .btn-ghost:active { transform: scale(0.97); }
     .cta-credit { font-size: 11px; color: rgba(255,255,255,.22); margin-top: 48px; letter-spacing: 0.06em; }
 
+    /* ── SLIDE 7 — PHONE MOCKUPS ─────────────── */
+    .s-mockups { background: linear-gradient(145deg, #cfddd8 0%, #d8e6e0 50%, #c4d8d2 100%); }
+    .mockup-stage {
+      position: relative; width: 680px; height: 500px; margin: 0 auto;
+    }
+    .clay-wrap {
+      position: absolute; bottom: 0;
+      transition: transform 700ms var(--ease-out), opacity 700ms var(--ease-out);
+    }
+    .clay-wrap.phone-left {
+      left: 0; transform-origin: bottom center;
+      transform: translateX(60px) rotate(16deg) translateY(30px);
+      z-index: 2;
+    }
+    .clay-wrap.phone-center {
+      left: 50%; transform: translateX(-50%) translateY(40px);
+      z-index: 3;
+    }
+    .clay-wrap.phone-right {
+      right: 0; transform-origin: bottom center;
+      transform: translateX(-60px) rotate(-10deg) translateY(30px);
+      z-index: 1;
+    }
+    .slide.active .clay-wrap.phone-left  { transform: translateX(60px) rotate(16deg) translateY(30px); opacity: 1; }
+    .slide.active .clay-wrap.phone-center { transform: translateX(-50%) translateY(0); opacity: 1; }
+    .slide.active .clay-wrap.phone-right  { transform: translateX(-60px) rotate(-10deg) translateY(30px); opacity: 1; }
+
+    /* stagger the three phones coming in */
+    .slide.active .phone-left   { transition-delay: 300ms; }
+    .slide.active .phone-center { transition-delay: 150ms; }
+    .slide.active .phone-right  { transition-delay: 450ms; }
+
+    .clay-phone {
+      background: #fff; border-radius: 38px;
+      border: 8px solid #e2e2e2;
+      box-shadow: 0 28px 60px rgba(0,0,0,.18), 0 6px 18px rgba(0,0,0,.1), inset 0 0 0 1px rgba(255,255,255,.9);
+      overflow: hidden; position: relative;
+    }
+    .clay-phone.sz-lg { width: 220px; height: 452px; }
+    .clay-phone.sz-sm { width: 196px; height: 402px; }
+
+    /* top notch bar */
+    .clay-notch { height: 20px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; }
+    .clay-notch span { width: 48px; height: 4px; border-radius: 3px; background: #d0d0d0; }
+    .clay-screen { flex: 1; overflow: hidden; }
+
+    /* ── SCREEN 1 — HERO ─────────────────── */
+    .scr-hero {
+      background: #0D2B1A;
+      height: 100%; display: flex; flex-direction: column;
+      font-family: 'Inter', sans-serif;
+    }
+    .scr-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 6px 10px; background: rgba(255,255,255,.04);
+    }
+    .scr-logo-txt { font-family: 'Montserrat', sans-serif; font-size: 7px; font-weight: 800; color: #fff; letter-spacing: .08em; }
+    .scr-order-btn { background: #25D366; color: #fff; font-size: 5.5px; font-weight: 700; font-family: 'Montserrat', sans-serif; padding: 3px 7px; border-radius: 999px; letter-spacing: .05em; }
+    .scr-hero-body { flex: 1; padding: 10px 12px 8px; position: relative; overflow: hidden; }
+    .scr-bottle {
+      position: absolute; right: -8px; top: 0; bottom: 0;
+      width: 95px;
+      background: linear-gradient(160deg, #1B4332 0%, #0D2B1A 60%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .scr-bottle-shape {
+      width: 36px; height: 80px; border-radius: 4px 4px 6px 6px;
+      background: linear-gradient(180deg, #4a3000 0%, #6d4700 40%, #3d2900 100%);
+      position: relative; margin-top: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,.4);
+    }
+    .scr-bottle-shape::before {
+      content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      width: 10px; height: 14px; background: #2a1e00; border-radius: 2px;
+    }
+    .scr-bottle-label {
+      position: absolute; top: 22px; left: 2px; right: 2px;
+      background: #2D6A4F; border-radius: 2px; padding: 3px 2px; text-align: center;
+    }
+    .scr-bottle-label span { display: block; font-family: 'Montserrat', sans-serif; font-size: 4px; font-weight: 800; color: #fff; letter-spacing: .1em; }
+    .scr-bottle-label small { font-size: 3px; color: rgba(255,255,255,.7); }
+    .scr-hero-text { position: relative; z-index: 1; max-width: 115px; }
+    .scr-eyebrow-txt { font-size: 5px; color: #C9963A; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 5px; }
+    .scr-h1 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: #fff; line-height: 1.1; letter-spacing: -1px; }
+    .scr-h1 em { font-style: italic; color: #C9963A; }
+    .scr-hero-desc { font-size: 5.5px; color: rgba(255,255,255,.55); line-height: 1.55; margin: 6px 0 8px; max-width: 110px; }
+    .scr-btn-row { display: flex; gap: 4px; }
+    .scr-btn-p { background: #1B4332; color: #fff; font-size: 5.5px; font-weight: 700; font-family: 'Montserrat', sans-serif; padding: 4px 8px; border-radius: 999px; }
+    .scr-btn-g { background: transparent; color: rgba(255,255,255,.75); font-size: 5.5px; font-weight: 600; font-family: 'Montserrat', sans-serif; padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); }
+    .scr-stats { display: flex; gap: 10px; padding: 7px 12px; border-top: 1px solid rgba(255,255,255,.08); margin-top: auto; }
+    .scr-stat strong { display: block; font-size: 9px; font-weight: 800; color: #fff; font-family: 'Montserrat', sans-serif; }
+    .scr-stat span { font-size: 4.5px; color: rgba(255,255,255,.45); }
+
+    /* ── SCREEN 2 — ABOUT ────────────────── */
+    .scr-about { background: #FAFAF8; height: 100%; display: flex; flex-direction: column; }
+    .scr-about-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 5px 9px; background: #f2eeea;
+    }
+    .scr-about-nav-txt { font-size: 6px; font-weight: 700; font-family: 'Montserrat', sans-serif; color: #1A1A18; }
+    .scr-about-order { background: #25D366; color: #fff; font-size: 5.5px; font-weight: 700; font-family: 'Montserrat', sans-serif; padding: 2.5px 6px; border-radius: 999px; }
+    .scr-about-img {
+      width: 100%; height: 130px; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #c8f0d4 0%, #a8e6c0 40%, #7dd4a8 70%, #5cb88a 100%);
+      display: flex; align-items: flex-end; justify-content: center;
+    }
+    .scr-prod-row {
+      display: flex; align-items: flex-end; gap: 4px; padding: 0 10px 8px;
+    }
+    .scr-prod { border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+    .scr-prod-1 { width: 32px; height: 70px; background: linear-gradient(180deg, #1B4332 0%, #2D6A4F 100%); border-radius: 4px; position: relative; }
+    .scr-prod-1::after { content: 'Asli\AMills'; white-space: pre; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 3.5px; font-weight: 800; color: #fff; text-align: center; font-family: 'Montserrat', sans-serif; }
+    .scr-prod-2 { width: 26px; height: 56px; background: linear-gradient(180deg, #3a7d44 0%, #52b788 100%); border-radius: 4px; }
+    .scr-prod-3 { width: 28px; height: 64px; background: linear-gradient(180deg, #2D6A4F 0%, #1B4332 100%); border-radius: 4px; }
+    .scr-badge { position: absolute; bottom: 6px; right: 8px; background: #0D2B1A; color: #fff; font-size: 8px; font-weight: 900; font-family: 'Playfair Display', serif; padding: 6px 8px; border-radius: 8px; text-align: center; line-height: 1.2; }
+    .scr-badge small { display: block; font-size: 4px; font-weight: 400; font-family: 'Inter', sans-serif; opacity: .7; }
+    .scr-about-body { padding: 10px 12px; }
+    .scr-about-tag { font-size: 5.5px; font-weight: 700; font-family: 'Montserrat', sans-serif; color: #C9963A; letter-spacing: .12em; text-transform: uppercase; display: flex; align-items: center; gap: 5px; margin-bottom: 5px; }
+    .scr-about-tag::before { content: ''; width: 12px; height: 1.5px; background: #C9963A; border-radius: 1px; flex-shrink: 0; }
+    .scr-about-h { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 900; color: #1A1A18; line-height: 1.1; margin-bottom: 6px; }
+    .scr-about-p { font-size: 5.5px; color: #5C5C5A; line-height: 1.6; margin-bottom: 4px; }
+
+    /* ── SCREEN 3 — PRODUCT ──────────────── */
+    .scr-product { background: #fff; height: 100%; display: flex; flex-direction: column; }
+    .scr-prod-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 5px 9px; background: #f2eeea;
+    }
+    .scr-prod-img-area {
+      width: 100%; height: 110px; overflow: hidden; position: relative;
+      background: linear-gradient(135deg, #b8956a 0%, #d4a96a 40%, #8b6914 70%, #6b5010 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .scr-bottle-prod {
+      width: 38px; height: 78px; background: linear-gradient(180deg, #4a3000 0%, #6d4700 40%, #3d2900 100%);
+      border-radius: 3px 3px 5px 5px; position: relative;
+      box-shadow: 2px 4px 12px rgba(0,0,0,.45);
+    }
+    .scr-bottle-prod::before { content: ''; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); width: 9px; height: 14px; background: #1a1000; border-radius: 2px; }
+    .scr-bottle-prod-label { position: absolute; top: 18px; left: 2px; right: 2px; background: #2D6A4F; border-radius: 2px; padding: 3px 2px; text-align: center; }
+    .scr-bottle-prod-label span { display: block; font-size: 3.5px; font-weight: 800; color: #fff; font-family: 'Montserrat', sans-serif; letter-spacing: .08em; }
+    .scr-bottle-prod-label small { font-size: 3px; color: rgba(255,255,255,.7); }
+    .scr-leaf-deco { position: absolute; font-size: 32px; opacity: .35; left: 6px; top: 4px; }
+    .scr-prod-body { padding: 8px 10px; flex: 1; overflow: hidden; }
+    .scr-prod-tag { font-size: 5px; font-weight: 700; font-family: 'Montserrat', sans-serif; color: #C9963A; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px; }
+    .scr-prod-name { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 900; color: #1A1A18; line-height: 1.1; margin-bottom: 2px; }
+    .scr-prod-vol { font-size: 5.5px; color: #9C9C9A; margin-bottom: 4px; }
+    .scr-stars { color: #C9963A; font-size: 8px; letter-spacing: 1px; margin-bottom: 5px; }
+    .scr-divider { height: 1px; background: #EBEBEA; margin: 5px 0; }
+    .scr-benefits-label { font-size: 5.5px; font-weight: 700; font-family: 'Montserrat', sans-serif; color: #9C9C9A; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+    .scr-benefit { display: flex; align-items: flex-start; gap: 3px; margin-bottom: 2.5px; }
+    .scr-dot { width: 3.5px; height: 3.5px; border-radius: 50%; background: #C9963A; flex-shrink: 0; margin-top: 1px; }
+    .scr-benefit span { font-size: 5px; color: #5C5C5A; line-height: 1.5; }
+    .scr-wa-btn { margin: 6px 10px 8px; background: #1B4332; color: #fff; font-size: 6px; font-weight: 700; font-family: 'Montserrat', sans-serif; padding: 7px; border-radius: 8px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 4px; }
+
+    .mockup-label {
+      font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: rgba(255,255,255,.65); text-align: center; margin-top: 18px;
+    }
+
     /* ── RESPONSIVE ─────────────────────────── */
     @media (max-width: 900px) {
       .slide { padding: 52px 28px 90px; }
@@ -599,7 +760,121 @@
     </div>
   </section>
 
-  <!-- SLIDE 7 — CTA -->
+  <!-- SLIDE 7 — PHONE MOCKUPS -->
+  <section class="slide s-mockups" data-title="Asli Mills on Mobile">
+    <div class="eyebrow anim-el" style="color:#1B4332;"><span style="background:#1B4332;"></span> The Live Experience <span style="background:#1B4332;"></span></div>
+    <div class="mockup-stage">
+
+      <!-- LEFT PHONE — About / Who We Are -->
+      <div class="clay-wrap phone-left">
+        <div class="clay-phone sz-sm">
+          <div class="clay-notch"><span></span></div>
+          <div class="scr-about">
+            <div class="scr-about-nav">
+              <div class="scr-about-nav-txt">ASLI MILLS</div>
+              <div style="display:flex;gap:5px;font-size:5.5px;color:#5C5C5A;">Home&nbsp; About&nbsp; Products</div>
+              <div class="scr-about-order">Order Now</div>
+            </div>
+            <div class="scr-about-img">
+              <div class="scr-prod-row">
+                <div class="scr-prod-1"></div>
+                <div class="scr-prod-2"></div>
+                <div class="scr-prod-3"></div>
+              </div>
+              <div class="scr-badge">25+<small>Years Trusted</small></div>
+            </div>
+            <div class="scr-about-body">
+              <div class="scr-about-tag">About Us</div>
+              <div class="scr-about-h">Who We Are</div>
+              <p class="scr-about-p">Asli Mills was founded on 5th February 1998. We have become a leading producer for reliable and natural products by producing 100% natural products with quality.</p>
+              <p class="scr-about-p">From the ancient Frankincense forests of the Horn of Africa to the time-honoured Qasil leaf trusted by generations of Somali women.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER PHONE — Hero / First Screenshot -->
+      <div class="clay-wrap phone-center">
+        <div class="clay-phone sz-lg">
+          <div class="clay-notch"><span></span></div>
+          <div class="scr-hero">
+            <div class="scr-nav">
+              <div class="scr-logo-txt">ASLI MILLS</div>
+              <div style="display:flex;gap:6px;font-size:5px;color:rgba(255,255,255,.5);align-items:center;">Home About Products</div>
+              <div class="scr-order-btn">• Order Now</div>
+            </div>
+            <div class="scr-hero-body">
+              <div class="scr-bottle">
+                <div class="scr-bottle-shape">
+                  <div class="scr-bottle-label">
+                    <span>ASLI MILLS</span>
+                    <span style="font-size:5px;font-weight:900;">EUCALYPTUS</span>
+                    <small>Therapeutic Grade</small>
+                  </div>
+                </div>
+              </div>
+              <div class="scr-hero-text">
+                <div class="scr-eyebrow-txt">— 100% NATURAL & ORGANIC</div>
+                <div class="scr-h1">Who We<br><em>Are.</em></div>
+                <div class="scr-hero-desc">Since 1998, Asli Mills has been Hargeisa's most trusted source for pure, natural skincare.</div>
+                <div class="scr-btn-row">
+                  <div class="scr-btn-p">Shop Products →</div>
+                  <div class="scr-btn-g">Our Story</div>
+                </div>
+              </div>
+            </div>
+            <div class="scr-stats">
+              <div class="scr-stat"><strong>1998</strong><span>Est. Hargeisa</span></div>
+              <div class="scr-stat"><strong>8+</strong><span>Products</span></div>
+              <div class="scr-stat"><strong>100%</strong><span>Organic</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT PHONE — Product / Eucalyptus Oil -->
+      <div class="clay-wrap phone-right">
+        <div class="clay-phone sz-sm">
+          <div class="clay-notch"><span></span></div>
+          <div class="scr-product">
+            <div class="scr-prod-nav">
+              <div class="scr-about-nav-txt">ASLI MILLS</div>
+              <div class="scr-about-order">Order Now</div>
+            </div>
+            <div class="scr-prod-img-area">
+              <span class="scr-leaf-deco">🌿</span>
+              <div class="scr-bottle-prod">
+                <div class="scr-bottle-prod-label">
+                  <span>ASLI MILLS</span>
+                  <span style="font-size:4.5px;font-weight:900;">EUCALYPTUS</span>
+                  <small>30ml</small>
+                </div>
+              </div>
+            </div>
+            <div class="scr-prod-body">
+              <div class="scr-prod-tag">Cold-Pressed Oil · 30ml</div>
+              <div class="scr-prod-name">Eucalyptus<br>Oil</div>
+              <div class="scr-prod-vol">Vol 30ml</div>
+              <div class="scr-stars">★★★★★</div>
+              <div class="scr-divider"></div>
+              <div class="scr-benefits-label">Key Benefits</div>
+              <div class="scr-benefit"><div class="scr-dot"></div><span>Antibacterial & antiseptic</span></div>
+              <div class="scr-benefit"><div class="scr-dot"></div><span>Soothes irritated skin</span></div>
+              <div class="scr-benefit"><div class="scr-dot"></div><span>Natural cooling sensation</span></div>
+              <div class="scr-benefit"><div class="scr-dot"></div><span>Topical or aromatherapy</span></div>
+            </div>
+            <div class="scr-wa-btn">
+              <svg viewBox="0 0 24 24" width="8" height="8" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+              Order via WhatsApp
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SLIDE 8 — CTA (was 7) -->
   <section class="slide s-cta" data-title="Ready to Launch">
     <div class="blobs">
       <div class="blob blob-1" style="animation-delay:-4s;"></div>
