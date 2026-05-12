@@ -420,7 +420,16 @@
     .cross::before { content: '✗'; width: 18px; height: 18px; border-radius: 50%; background: #fee2e2; color: #ef4444; font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
     /* ── SLIDE 9 — CTA ──────────────────────── */
-    .s-cta { background: #08110a; text-align: center; }
+    .s-cta {
+      background:
+        radial-gradient(ellipse 80% 55% at 50% 85%, rgba(45,106,79,0.5) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 35% at 10% 10%, rgba(201,150,58,0.08) 0%, transparent 55%),
+        linear-gradient(155deg, #0A1F12 0%, #1B4332 45%, #0D2B1A 75%, #071A0E 100%);
+      text-align: center;
+    }
+    .s-cta .blob-1 { animation-delay: -4s; }
+    .s-cta .blob-2 { animation-delay: -12s; }
+    .s-cta .blob-3 { animation-delay: -20s; }
     .cta-inner { position: relative; z-index: 2; max-width: 700px; }
     .cta-tag {
       font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
@@ -477,6 +486,97 @@
       padding: 4px 10px; border-radius: var(--r-full);
     }
     .cta-credit { font-size: 12px; color: rgba(255,255,255,.25); margin-top: 52px; letter-spacing: 0.06em; opacity: 0; animation: fadeUp 700ms 560ms var(--ease-out) forwards; }
+
+    /* ── SLIDE 8 PHONE SHOWCASE ─────────────────────── */
+    .s8-grain { position: absolute; inset: 0; pointer-events: none; opacity: 0.035; z-index: 1; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E"); }
+    .s8-leaf { position: absolute; pointer-events: none; }
+    .s8-inner { position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 24px; width: 100%; }
+    .s8-head { text-align: center; opacity: 0; animation: fadeUp 800ms var(--ease-out) 100ms both; }
+    .s8-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .s8-eyebrow span { display: block; width: 28px; height: 1px; background: var(--gold); opacity: 0.6; }
+    .s8-headline { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(30px, 4vw, 56px); font-weight: 900; line-height: 0.98; letter-spacing: -2px; color: #fff; }
+    .s8-headline em { font-style: italic; color: var(--green-400); }
+    .s8-subline { margin-top: 10px; font-size: 12px; color: rgba(255,255,255,.35); letter-spacing: 0.04em; }
+    .s8-phones { display: flex; align-items: flex-end; justify-content: center; }
+    .s8-slot { position: relative; flex-shrink: 0; }
+    .s8-slot:nth-child(1) { transform: rotate(-15deg); z-index: 1; margin-right: -22px; }
+    .s8-slot:nth-child(2) { transform: rotate(3deg); z-index: 3; }
+    .s8-slot:nth-child(3) { transform: rotate(13deg); z-index: 2; margin-left: -22px; }
+    .s8-enter { opacity: 0; animation: s8Enter 1000ms var(--ease-out) both; }
+    .s8-slot:nth-child(1) .s8-enter { animation-delay: 350ms; }
+    .s8-slot:nth-child(2) .s8-enter { animation-delay: 520ms; }
+    .s8-slot:nth-child(3) .s8-enter { animation-delay: 690ms; }
+    .s8-float { animation: s8Float ease-in-out infinite alternate; }
+    .s8-slot:nth-child(1) .s8-float { animation-duration: 6.2s; animation-delay: 0s; }
+    .s8-slot:nth-child(2) .s8-float { animation-duration: 5.1s; animation-delay: -1.8s; }
+    .s8-slot:nth-child(3) .s8-float { animation-duration: 7s; animation-delay: -3.4s; }
+    .s8-phone { width: 178px; height: 374px; border-radius: 32px; background: #fff; box-shadow: 0 0 0 8px #1c1c1e, 0 0 0 10px #2c2c2e, 0 40px 70px rgba(0,0,0,.55), 0 0 50px rgba(82,183,136,.05); overflow: hidden; position: relative; transition: box-shadow 350ms var(--ease-out); }
+    .s8-phone::before { content: ''; position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 60px; height: 18px; background: #1c1c1e; border-radius: 10px; z-index: 10; }
+    .s8-slot:hover .s8-phone { box-shadow: 0 0 0 8px #1c1c1e, 0 0 0 10px #2c2c2e, 0 55px 90px rgba(0,0,0,.65), 0 0 70px rgba(82,183,136,.2); }
+    .s8-screen { width: 100%; height: 100%; overflow: hidden; position: relative; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    .s8-nav { height: 32px; padding: 25px 10px 0; background: #e8e5d8; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(180,170,145,.2); }
+    .s8-nav-logo { width: 18px; height: 18px; background: #1B4332; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+    .s8-nav-brand { font-family: 'Montserrat', sans-serif; font-size: 6.5px; font-weight: 800; color: #1A1A18; letter-spacing: .05em; }
+    .s8-nav-menu { display: flex; flex-direction: column; gap: 3px; }
+    .s8-nav-menu span { display: block; width: 12px; height: 1.5px; background: #1A1A18; border-radius: 2px; }
+    .s8-label { display: block; text-align: center; margin-top: 10px; font-family: 'Montserrat', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.28); }
+    /* Phone 1 — Products */
+    .s8-p1-img { display: block; width: 100%; height: 158px; object-fit: cover; background: linear-gradient(135deg,#c8dfc5,#a8cba5); }
+    .s8-p1-body { padding: 8px 10px; }
+    .s8-p1-cat { font-family: 'Montserrat',sans-serif; font-size: 6.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #C9963A; margin-bottom: 3px; }
+    .s8-p1-name { font-family: 'Playfair Display',serif; font-size: 12px; font-weight: 900; color: #1A1A18; line-height: 1.15; margin-bottom: 2px; }
+    .s8-p1-sub { font-size: 7px; color: #9C9C9A; margin-bottom: 5px; }
+    .s8-p1-stars { font-size: 10px; color: #C9963A; letter-spacing: 2px; margin-bottom: 8px; }
+    .s8-p1-btn { display: block; width: 100%; padding: 8px; background: #25D366; color: #fff; border-radius: 999px; font-family: 'Montserrat',sans-serif; font-size: 7px; font-weight: 700; text-align: center; letter-spacing: .06em; }
+    /* Phone 2 — Hero */
+    .s8-hw { position: relative; width: 100%; height: 100%; background: #08110a; overflow: hidden; }
+    .s8-hb1 { position: absolute; width: 155px; height: 155px; border-radius: 50%; background: radial-gradient(circle, rgba(45,106,79,.7), transparent 65%); top: -48px; left: -32px; filter: blur(38px); animation: s8Blob1 18s ease-in-out infinite alternate; }
+    .s8-hb2 { position: absolute; width: 105px; height: 105px; border-radius: 50%; background: radial-gradient(circle, rgba(201,150,58,.25), transparent 65%); bottom: 48px; right: -22px; filter: blur(28px); animation: s8Blob2 22s ease-in-out infinite alternate; }
+    .s8-hi { position: absolute; z-index: 1; width: 100%; height: 55%; object-fit: cover; object-position: center; }
+    .s8-ho { position: absolute; inset: 0; z-index: 2; background: linear-gradient(to top, #08110a 38%, rgba(8,17,10,.55) 62%, rgba(8,17,10,.1) 100%); }
+    .s8-hn { position: absolute; top: 0; left: 0; right: 0; z-index: 5; padding: 25px 10px 0; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .s8-hn-logo { width: 18px; height: 18px; background: rgba(27,67,50,.9); border: 1px solid rgba(82,183,136,.35); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+    .s8-hn-brand { font-family: 'Montserrat',sans-serif; font-size: 6.5px; font-weight: 800; color: rgba(255,255,255,.92); letter-spacing: .06em; }
+    .s8-hn-menu { display: flex; flex-direction: column; gap: 3px; }
+    .s8-hn-menu span { display: block; width: 12px; height: 1.5px; background: rgba(255,255,255,.8); border-radius: 2px; }
+    .s8-hc { position: absolute; bottom: 0; left: 0; right: 0; z-index: 5; padding: 0 12px 14px; }
+    .s8-hbadge { display: inline-flex; align-items: center; gap: 5px; font-family: 'Montserrat',sans-serif; font-size: 6px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #C9963A; margin-bottom: 6px; }
+    .s8-hbadge::before { content: ''; width: 10px; height: 1.5px; background: #C9963A; flex-shrink: 0; }
+    .s8-hh1 { font-family: 'Playfair Display',serif; font-size: 25px; font-weight: 900; color: #fff; line-height: .9; letter-spacing: -1px; margin-bottom: 7px; }
+    .s8-hh1 em { font-style: italic; color: #C9963A; display: block; }
+    .s8-hsub { font-size: 6.5px; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 10px; }
+    .s8-hcta { display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%; padding: 8px; background: #25D366; color: #fff; border-radius: 999px; font-family: 'Montserrat',sans-serif; font-size: 7px; font-weight: 700; letter-spacing: .05em; }
+    .s8-htrust { display: flex; align-items: center; justify-content: center; margin-top: 8px; }
+    .s8-ht-item { font-size: 5.5px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .08em; text-transform: uppercase; padding: 0 4px; }
+    .s8-ht-dot { color: rgba(255,255,255,.2); font-size: 7px; }
+    /* Phone 3 — Product detail */
+    .s8-p3h { width: 100%; height: 128px; background: linear-gradient(135deg,#f2e4ce,#e8d5b5); overflow: hidden; }
+    .s8-p3h img { width: 100%; height: 100%; object-fit: cover; }
+    .s8-p3back { display: flex; align-items: center; gap: 4px; padding: 6px 10px 0; font-family: 'Montserrat',sans-serif; font-size: 6.5px; font-weight: 600; color: #5C5C5A; }
+    .s8-p3b { padding: 7px 10px; }
+    .s8-p3tag { font-family: 'Montserrat',sans-serif; font-size: 6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9C9C9A; margin-bottom: 2px; }
+    .s8-p3name { font-family: 'Playfair Display',serif; font-size: 18px; font-weight: 900; color: #1A1A18; line-height: 1; letter-spacing: -.5px; margin-bottom: 2px; }
+    .s8-p3gold { font-family: 'Montserrat',sans-serif; font-size: 6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #C9963A; margin-bottom: 6px; }
+    .s8-p3hr { height: 1px; background: #EBEBEA; margin: 5px 0; }
+    .s8-p3lbl { font-family: 'Montserrat',sans-serif; font-size: 6px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9C9C9A; margin-bottom: 5px; }
+    .s8-p3desc { font-size: 6.5px; color: #5C5C5A; line-height: 1.75; margin-bottom: 6px; }
+    .s8-p3ben { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .s8-p3ben li { display: flex; align-items: flex-start; gap: 5px; font-size: 6.5px; color: #3C3C3A; line-height: 1.5; }
+    .s8-p3ben li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: #C9963A; flex-shrink: 0; margin-top: 2px; }
+    /* Keyframes for slide 8 */
+    @keyframes s8Enter { from { opacity: 0; transform: translateY(40px) scale(0.88); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes s8Float { from { transform: translateY(0); } to { transform: translateY(-12px); } }
+    @keyframes s8Blob1 { from { transform: translate(0,0); } to { transform: translate(12px, 8px); } }
+    @keyframes s8Blob2 { from { transform: translate(0,0); } to { transform: translate(-8px, -6px); } }
+    /* Leaf positions */
+    .s8-leaf-1 { top: 4%; left: 1%; width: 150px; opacity: 0.055; transform: rotate(-20deg); }
+    .s8-leaf-2 { bottom: 5%; right: 1%; width: 115px; opacity: 0.04; transform: rotate(145deg); }
+    .s8-leaf-3 { top: 38%; right: 2%; width: 75px; opacity: 0.035; transform: rotate(70deg); }
+    .s8-leaf-4 { bottom: 22%; left: 1.5%; width: 65px; opacity: 0.038; transform: rotate(-38deg); }
+    /* Slide 8 CTA overrides */
+    .s8-cta-actions { opacity: 0; animation: fadeUp 700ms 900ms var(--ease-out) both; }
+    .s-cta .cta-credit { margin-top: 20px; }
+    .s8-logo-svg { display: inline-block; vertical-align: middle; margin: 0 4px -2px; }
 
     /* ── SHARED SECTION HEADING ─────────────── */
     .section-tag {
@@ -619,6 +719,7 @@
     [data-delay="4"] { transition-delay: 240ms !important; }
     [data-delay="5"] { transition-delay: 300ms !important; }
     [data-delay="6"] { transition-delay: 360ms !important; }
+
   </style>
 </head>
 <body>
@@ -1067,22 +1168,173 @@
   <!-- SLIDE 9 — CTA                       -->
   <!-- ─────────────────────────────────── -->
   <section class="slide s-cta" id="slide-8">
+    <!-- Blobs (ambient glow, inherited from global .blob styles) -->
     <div class="blobs">
-      <div class="blob blob-1" style="animation-delay:-4s;"></div>
-      <div class="blob blob-2" style="animation-delay:-12s;"></div>
-      <div class="blob blob-3" style="animation-delay:-20s;"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
     </div>
-    <div class="cta-inner">
-      <div class="cta-tag"><span></span> Ready to Launch <span></span></div>
-      <h2 class="cta-h">Your Brand Deserves<br>a Website <em>This Good</em></h2>
-      <p class="cta-sub">Asli Mills products are natural, high quality, and made with care. Now the website finally matches that standard — and starts bringing in customers the moment it goes live.</p>
+    <!-- Grain texture -->
+    <div class="s8-grain"></div>
+    <!-- Botanical leaves -->
+    <svg class="s8-leaf s8-leaf-1" viewBox="0 0 200 320" fill="none">
+      <path d="M100 310 C55 220 15 145 38 58 C62 -28 138 -28 162 58 C185 145 145 220 100 310Z" fill="#52B788"/>
+      <line x1="100" y1="310" x2="100" y2="30" stroke="#2D6A4F" stroke-width="2" opacity="0.5"/>
+      <line x1="100" y1="200" x2="68" y2="145" stroke="#2D6A4F" stroke-width="1.5" opacity="0.35"/>
+      <line x1="100" y1="200" x2="132" y2="145" stroke="#2D6A4F" stroke-width="1.5" opacity="0.35"/>
+    </svg>
+    <svg class="s8-leaf s8-leaf-2" viewBox="0 0 200 320" fill="none">
+      <path d="M100 310 C55 220 15 145 38 58 C62 -28 138 -28 162 58 C185 145 145 220 100 310Z" fill="#52B788"/>
+    </svg>
+    <svg class="s8-leaf s8-leaf-3" viewBox="0 0 200 320" fill="none">
+      <path d="M100 310 C55 220 15 145 38 58 C62 -28 138 -28 162 58 C185 145 145 220 100 310Z" fill="#C9963A"/>
+    </svg>
+    <svg class="s8-leaf s8-leaf-4" viewBox="0 0 200 320" fill="none">
+      <path d="M100 310 C55 220 15 145 38 58 C62 -28 138 -28 162 58 C185 145 145 220 100 310Z" fill="#C9963A"/>
+    </svg>
 
-      <div class="cta-actions">
+    <div class="s8-inner">
+
+      <!-- Header -->
+      <header class="s8-head">
+        <p class="s8-eyebrow"><span></span>Asli Mills &mdash; Est. 1998<span></span></p>
+        <h2 class="s8-headline">Ancient Wisdom,<br><em>Distilled.</em></h2>
+        <p class="s8-subline">100% Organic &nbsp;&middot;&nbsp; Horn of Africa &nbsp;&middot;&nbsp; 25+ Years Trusted</p>
+      </header>
+
+      <!-- Phone trio -->
+      <div class="s8-phones" id="s8Phones">
+
+        <!-- Phone 1 — Products -->
+        <div class="s8-slot">
+          <div class="s8-enter">
+            <div class="s8-float">
+              <div class="s8-phone">
+                <div class="s8-screen">
+                  <div class="s8-nav">
+                    <div class="s8-nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><path d="M12 22s-8-6-8-12a8 8 0 0116 0c0 6-8 12-8 12z"/><circle cx="12" cy="10" r="2.5" fill="#fff" stroke="none"/></svg></div>
+                    <span class="s8-nav-brand">ASLI MILLS</span>
+                    <div class="s8-nav-menu"><span></span><span></span><span></span></div>
+                  </div>
+                  <img class="s8-p1-img" src="products/product 1.jpg" alt="Face Mask" onerror="this.style.background='linear-gradient(135deg,#c8dfc5,#a8cba5)';this.removeAttribute('src')">
+                  <div class="s8-p1-body">
+                    <div class="s8-p1-cat">Face Care</div>
+                    <div class="s8-p1-name">Asli Mills<br>Face Mask</div>
+                    <div class="s8-p1-sub">100g &nbsp;&middot;&nbsp; 100% Natural</div>
+                    <div class="s8-p1-stars">★★★★★</div>
+                    <div class="s8-p1-btn">ORDER VIA WHATSAPP</div>
+                  </div>
+                </div>
+              </div>
+              <span class="s8-label">Products</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone 2 — Hero: 100% Natural & Organic / Who We Are -->
+        <div class="s8-slot">
+          <div class="s8-enter">
+            <div class="s8-float">
+              <div class="s8-phone">
+                <div class="s8-screen">
+                  <div class="s8-hw">
+                    <div class="s8-hb1"></div>
+                    <div class="s8-hb2"></div>
+                    <img class="s8-hi" src="products/product 2.jpg" alt="Asli Mills" onerror="this.style.background='linear-gradient(160deg,#1B4332,#0D2B1A)';this.removeAttribute('src')">
+                    <div class="s8-ho"></div>
+                    <div class="s8-hn">
+                      <div class="s8-hn-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><path d="M12 22s-8-6-8-12a8 8 0 0116 0c0 6-8 12-8 12z"/><circle cx="12" cy="10" r="2.5" fill="#fff" stroke="none"/></svg></div>
+                      <span class="s8-hn-brand">ASLI MILLS</span>
+                      <div class="s8-hn-menu"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="s8-hc">
+                      <div class="s8-hbadge">100% Natural &amp; Organic</div>
+                      <div class="s8-hh1">Who We<em>Are.</em></div>
+                      <div class="s8-hsub">Since 1998, Hargeisa's most trusted source for natural skincare.</div>
+                      <div class="s8-hcta">
+                        <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+                        Order via WhatsApp
+                      </div>
+                      <div class="s8-htrust">
+                        <span class="s8-ht-item">100% Natural</span><span class="s8-ht-dot">&nbsp;&middot;&nbsp;</span>
+                        <span class="s8-ht-item">Est. 1998</span><span class="s8-ht-dot">&nbsp;&middot;&nbsp;</span>
+                        <span class="s8-ht-item">25+ Years</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="s8-label">Who We Are</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone 3 — Eucalyptus Oil -->
+        <div class="s8-slot">
+          <div class="s8-enter">
+            <div class="s8-float">
+              <div class="s8-phone">
+                <div class="s8-screen">
+                  <div class="s8-nav">
+                    <div class="s8-nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><path d="M12 22s-8-6-8-12a8 8 0 0116 0c0 6-8 12-8 12z"/><circle cx="12" cy="10" r="2.5" fill="#fff" stroke="none"/></svg></div>
+                    <span class="s8-nav-brand">ASLI MILLS</span>
+                    <div class="s8-nav-menu"><span></span><span></span><span></span></div>
+                  </div>
+                  <div class="s8-p3h"><img src="products/product4.jpg" alt="Eucalyptus Oil" onerror="this.style.background='linear-gradient(135deg,#f2e4ce,#e8d5b5)';this.removeAttribute('src')"></div>
+                  <div class="s8-p3back"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="3" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>&nbsp;All Products</div>
+                  <div class="s8-p3b">
+                    <div class="s8-p3tag">100ML &nbsp;&middot;&nbsp; 35ML</div>
+                    <div class="s8-p3name">Eucalyptus<br>Oil</div>
+                    <div class="s8-p3gold">Natural Product</div>
+                    <div class="s8-p3hr"></div>
+                    <div class="s8-p3lbl">Description</div>
+                    <div class="s8-p3desc">Made from fresh eucalyptus leaves with antibacterial and anti-inflammatory properties.</div>
+                    <div class="s8-p3hr"></div>
+                    <div class="s8-p3lbl">Benefits</div>
+                    <ul class="s8-p3ben">
+                      <li>Antibacterial &amp; antiseptic</li>
+                      <li>Soothes irritated skin</li>
+                      <li>Natural cooling sensation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="s8-label">Eucalyptus Oil</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /s8-phones -->
+
+      <!-- CTA actions -->
+      <div class="cta-actions s8-cta-actions">
         <a href="https://horumar-solution.github.io/asli-mills/" class="btn-gold" target="_blank" rel="noopener">View the Live Site →</a>
         <a href="https://horumar-solution.github.io/Abeer-Abdallah-Jama.index.html" target="_blank" rel="noopener" class="btn-ghost">Horumar Solution Portfolio →</a>
       </div>
-      <p class="cta-credit">Designed by &nbsp;<svg width="86" height="20" viewBox="0 0 86 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin:0 4px -2px;"><rect width="86" height="20" rx="10" fill="#2563EB"/><circle cx="11" cy="10" r="6.5" fill="white"/><circle cx="11" cy="10" r="3.5" fill="#2563EB"/><text x="21" y="14.5" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" fill="white">horumar</text></svg>&nbsp; Horumar Solution &nbsp;·&nbsp; abeerabdallah091@gmail.com</p>
-    </div>
+      <p class="cta-credit">Designed by &nbsp;<svg class="s8-logo-svg" width="86" height="20" viewBox="0 0 86 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="86" height="20" rx="10" fill="#2563EB"/><circle cx="11" cy="10" r="6.5" fill="white"/><circle cx="11" cy="10" r="3.5" fill="#2563EB"/><text x="21" y="14.5" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" fill="white">horumar</text></svg>&nbsp; Horumar Solution &nbsp;&middot;&nbsp; abeerabdallah091@gmail.com</p>
+
+    </div><!-- /s8-inner -->
+
+    <script>
+      /* Spring parallax for phone cluster on slide 8 */
+      (function() {
+        var el = document.getElementById('s8Phones');
+        if (!el) return;
+        var tx = 0, ty = 0, cx = 0, cy = 0;
+        document.addEventListener('mousemove', function(e) {
+          var hw = window.innerWidth / 2, hh = window.innerHeight / 2;
+          tx = (e.clientX - hw) / hw * 8;
+          ty = (e.clientY - hh) / hh * -5;
+        });
+        document.addEventListener('mouseleave', function() { tx = 0; ty = 0; });
+        (function tick() {
+          cx += (tx - cx) * 0.055;
+          cy += (ty - cy) * 0.055;
+          el.style.transform = 'perspective(1200px) rotateY(' + cx.toFixed(3) + 'deg) rotateX(' + cy.toFixed(3) + 'deg)';
+          requestAnimationFrame(tick);
+        })();
+      })();
+    </script>
   </section>
 
   <script>
